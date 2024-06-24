@@ -1,0 +1,3727 @@
+<!-- Elements added to main will be displayed on all pages -->
+
+<!doctype html>
+<html lang="en" class="no-js">
+  <head>
+    
+      <meta charset="utf-8">
+      <meta name="viewport" content="width=device-width,initial-scale=1">
+      
+      
+      
+      
+        <link rel="prev" href="../Advanced%20Computational%20Geometry%20in%20Paraview%20with%20CGAL%20%26%20Vespa/">
+      
+      
+        <link rel="next" href="../Getting%20Started%20With%20The%20Paraview%20Terminal%20%28PvPython%29/">
+      
+      
+      <link rel="icon" href="../../../../assets/images/favicon.ico">
+      <meta name="generator" content="mkdocs-1.6.0, mkdocs-material-9.5.26">
+    
+    
+      
+        <title>Paraview Python Plugins - UArizona HPC Documentation</title>
+      
+    
+    
+      <link rel="stylesheet" href="../../../../assets/stylesheets/main.6543a935.min.css">
+      
+        
+        <link rel="stylesheet" href="../../../../assets/stylesheets/palette.06af60db.min.css">
+      
+      
+
+  
+  
+  
+  
+  <style>:root{--md-annotation-icon:url('data:image/svg+xml;charset=utf-8,<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M8.17 2.76A10.1 10.1 0 0 1 12 2c1.31 0 2.61.26 3.83.76 1.21.5 2.31 1.24 3.24 2.17.93.93 1.67 2.03 2.17 3.24.5 1.22.76 2.52.76 3.83 0 2.65-1.05 5.2-2.93 7.07A9.974 9.974 0 0 1 12 22a10.1 10.1 0 0 1-3.83-.76 9.975 9.975 0 0 1-3.24-2.17A9.974 9.974 0 0 1 2 12c0-2.65 1.05-5.2 2.93-7.07.93-.93 2.03-1.67 3.24-2.17M12 17l1.56-3.42L17 12l-3.44-1.56L12 7l-1.57 3.44L7 12l3.43 1.58L12 17Z"/></svg>');}</style>
+
+
+    
+    
+      
+    
+    
+      
+        
+        
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto:300,300i,400,400i,700,700i%7CRoboto+Mono:400,400i,700,700i&display=fallback">
+        <style>:root{--md-text-font:"Roboto";--md-code-font:"Roboto Mono"}</style>
+      
+    
+    
+      <link rel="stylesheet" href="../../../../assets/stylesheets/extra.css">
+    
+    <script>__md_scope=new URL("../../../..",location),__md_hash=e=>[...e].reduce((e,_)=>(e<<5)-e+_.charCodeAt(0),0),__md_get=(e,_=localStorage,t=__md_scope)=>JSON.parse(_.getItem(t.pathname+"."+e)),__md_set=(e,_,t=localStorage,a=__md_scope)=>{try{t.setItem(a.pathname+"."+e,JSON.stringify(_))}catch(e){}}</script>
+    
+      
+  
+
+
+  
+  
+
+<script id="__analytics">function __md_analytics(){function n(){dataLayer.push(arguments)}window.dataLayer=window.dataLayer||[],n("js",new Date),n("config","G-3V0VRBSRZF"),document.addEventListener("DOMContentLoaded",function(){document.forms.search&&document.forms.search.query.addEventListener("blur",function(){this.value&&n("event","search",{search_term:this.value})}),document$.subscribe(function(){var a=document.forms.feedback;if(void 0!==a)for(var e of a.querySelectorAll("[type=submit]"))e.addEventListener("click",function(e){e.preventDefault();var t=document.location.pathname,e=this.getAttribute("data-md-value");n("event","feedback",{page:t,data:e}),a.firstElementChild.disabled=!0;e=a.querySelector(".md-feedback__note [data-md-value='"+e+"']");e&&(e.hidden=!1)}),a.hidden=!1}),location$.subscribe(function(e){n("config","G-3V0VRBSRZF",{page_path:e.pathname})})});var e=document.createElement("script");e.async=!0,e.src="https://www.googletagmanager.com/gtag/js?id=G-3V0VRBSRZF",document.getElementById("__analytics").insertAdjacentElement("afterEnd",e)}</script>
+  
+    <script>"undefined"!=typeof __md_analytics&&__md_analytics()</script>
+  
+
+    
+    
+    
+  </head>
+  
+  
+    
+    
+    
+    
+    
+    <body dir="ltr" data-md-color-scheme="default" data-md-color-primary="custom" data-md-color-accent="custom">
+  
+    
+    <input class="md-toggle" data-md-toggle="drawer" type="checkbox" id="__drawer" autocomplete="off">
+    <input class="md-toggle" data-md-toggle="search" type="checkbox" id="__search" autocomplete="off">
+    <label class="md-overlay" for="__drawer"></label>
+    <div data-md-component="skip">
+      
+        
+        <a href="#example-plugin-1" class="md-skip">
+          Skip to content
+        </a>
+      
+    </div>
+    <div data-md-component="announce">
+      
+        <aside class="md-banner">
+          <div class="md-banner__inner md-grid md-typeset">
+            
+            
+ <p style="font-size: 15px;"><b>New Documentation</b><br>Welcome to our new HPC documentation website! Have comments or suggestions on improving the content? <a href="../support_and_training/consulting_services/">Contact us</a> to let us know your thoughts.</p>
+
+          </div>
+          
+        </aside>
+      
+    </div>
+    
+    
+      
+
+  
+
+<header class="md-header md-header--shadow" data-md-component="header">
+  <nav class="md-header__inner md-grid" aria-label="Header">
+    <a href="../../../.." title="UArizona HPC Documentation" class="md-header__button md-logo" aria-label="UArizona HPC Documentation" data-md-component="logo">
+      
+  <img src="../../../../assets/images/home/uofa_cactus_computing3.png" alt="logo">
+
+    </a>
+    <label class="md-header__button md-icon" for="__drawer">
+      
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M3 6h18v2H3V6m0 5h18v2H3v-2m0 5h18v2H3v-2Z"/></svg>
+    </label>
+    <div class="md-header__title" data-md-component="header-title">
+      <div class="md-header__ellipsis">
+        <div class="md-header__topic">
+          <span class="md-ellipsis">
+            UArizona HPC Documentation
+          </span>
+        </div>
+        <div class="md-header__topic" data-md-component="header-topic">
+          <span class="md-ellipsis">
+            
+              Paraview Python Plugins
+            
+          </span>
+        </div>
+      </div>
+    </div>
+    
+      
+    
+    
+    
+    
+      <label class="md-header__button md-icon" for="__search">
+        
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.516 6.516 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5Z"/></svg>
+      </label>
+      <div class="md-search" data-md-component="search" role="dialog">
+  <label class="md-search__overlay" for="__search"></label>
+  <div class="md-search__inner" role="search">
+    <form class="md-search__form" name="search">
+      <input type="text" class="md-search__input" name="query" aria-label="Search" placeholder="Search" autocapitalize="off" autocorrect="off" autocomplete="off" spellcheck="false" data-md-component="search-query" required>
+      <label class="md-search__icon md-icon" for="__search">
+        
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.516 6.516 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5Z"/></svg>
+        
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11h12Z"/></svg>
+      </label>
+      <nav class="md-search__options" aria-label="Search">
+        
+        <button type="reset" class="md-search__icon md-icon" title="Clear" aria-label="Clear" tabindex="-1">
+          
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M19 6.41 17.59 5 12 10.59 6.41 5 5 6.41 10.59 12 5 17.59 6.41 19 12 13.41 17.59 19 19 17.59 13.41 12 19 6.41Z"/></svg>
+        </button>
+      </nav>
+      
+    </form>
+    <div class="md-search__output">
+      <div class="md-search__scrollwrap" tabindex="0" data-md-scrollfix>
+        <div class="md-search-result" data-md-component="search-result">
+          <div class="md-search-result__meta">
+            Initializing search
+          </div>
+          <ol class="md-search-result__list" role="presentation"></ol>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+    
+    
+      <div class="md-header__source">
+        <a href="https://github.com/UA-ResearchComputing-HPC/hpc-documentation" title="Go to repository" class="md-source" data-md-component="source">
+  <div class="md-source__icon md-icon">
+    
+    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512"><!--! Font Awesome Free 6.5.2 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License) Copyright 2024 Fonticons, Inc.--><path d="M439.55 236.05 244 40.45a28.87 28.87 0 0 0-40.81 0l-40.66 40.63 51.52 51.52c27.06-9.14 52.68 16.77 43.39 43.68l49.66 49.66c34.23-11.8 61.18 31 35.47 56.69-26.49 26.49-70.21-2.87-56-37.34L240.22 199v121.85c25.3 12.54 22.26 41.85 9.08 55a34.34 34.34 0 0 1-48.55 0c-17.57-17.6-11.07-46.91 11.25-56v-123c-20.8-8.51-24.6-30.74-18.64-45L142.57 101 8.45 235.14a28.86 28.86 0 0 0 0 40.81l195.61 195.6a28.86 28.86 0 0 0 40.8 0l194.69-194.69a28.86 28.86 0 0 0 0-40.81z"/></svg>
+  </div>
+  <div class="md-source__repository">
+    GitHub
+  </div>
+</a>
+      </div>
+    
+  </nav>
+  
+</header>
+    
+    <div class="md-container" data-md-component="container">
+      
+      
+        
+          
+        
+      
+      <main class="md-main" data-md-component="main">
+        <div class="md-main__inner md-grid">
+          
+            
+              
+              <div class="md-sidebar md-sidebar--primary" data-md-component="sidebar" data-md-type="navigation" >
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    
+
+
+
+  
+
+<nav class="md-nav md-nav--primary md-nav--integrated" aria-label="Navigation" data-md-level="0">
+  <label class="md-nav__title" for="__drawer">
+    <a href="../../../.." title="UArizona HPC Documentation" class="md-nav__button md-logo" aria-label="UArizona HPC Documentation" data-md-component="logo">
+      
+  <img src="../../../../assets/images/home/uofa_cactus_computing3.png" alt="logo">
+
+    </a>
+    UArizona HPC Documentation
+  </label>
+  
+    <div class="md-nav__source">
+      <a href="https://github.com/UA-ResearchComputing-HPC/hpc-documentation" title="Go to repository" class="md-source" data-md-component="source">
+  <div class="md-source__icon md-icon">
+    
+    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512"><!--! Font Awesome Free 6.5.2 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License) Copyright 2024 Fonticons, Inc.--><path d="M439.55 236.05 244 40.45a28.87 28.87 0 0 0-40.81 0l-40.66 40.63 51.52 51.52c27.06-9.14 52.68 16.77 43.39 43.68l49.66 49.66c34.23-11.8 61.18 31 35.47 56.69-26.49 26.49-70.21-2.87-56-37.34L240.22 199v121.85c25.3 12.54 22.26 41.85 9.08 55a34.34 34.34 0 0 1-48.55 0c-17.57-17.6-11.07-46.91 11.25-56v-123c-20.8-8.51-24.6-30.74-18.64-45L142.57 101 8.45 235.14a28.86 28.86 0 0 0 0 40.81l195.61 195.6a28.86 28.86 0 0 0 40.8 0l194.69-194.69a28.86 28.86 0 0 0 0-40.81z"/></svg>
+  </div>
+  <div class="md-source__repository">
+    GitHub
+  </div>
+</a>
+    </div>
+  
+  <ul class="md-nav__list" data-md-scrollfix>
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../.." class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Home
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    
+    
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_2" >
+        
+          
+          <label class="md-nav__link" for="__nav_2" id="__nav_2_label" tabindex="0">
+            
+  
+  <span class="md-ellipsis">
+    HPC Quick Start
+  </span>
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_2_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_2">
+            <span class="md-nav__icon md-icon"></span>
+            HPC Quick Start
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../../quick_start/overview/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Overview
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../../quick_start/what_is_hpc/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    What is HPC?
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../../quick_start/common_misconceptions/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Common Misconceptions
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../../quick_start/logging_in/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Logging In
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../../quick_start/storage_and_transfers/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Storage and Transfers
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../../quick_start/accessing_compute/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Accessing Compute Nodes
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../../quick_start/software/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Software
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../../quick_start/summary/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Summary
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    
+    
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_3" >
+        
+          
+          <label class="md-nav__link" for="__nav_3" id="__nav_3_label" tabindex="0">
+            
+  
+  <span class="md-ellipsis">
+    Policies
+  </span>
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_3_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_3">
+            <span class="md-nav__icon md-icon"></span>
+            Policies
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../../policies/acceptable_use/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Acceptable Use
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../../policies/acknowledgements/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Acknowledgements
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../../policies/buy_in/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Buy-in
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../../policies/committees/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Committees
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../../policies/loss_of_university_affiliation/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Loss of University Affiliation
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../../policies/maintenance/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Maintenance
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../../policies/special_projects/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Special Projects
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    
+    
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_4" >
+        
+          
+          <label class="md-nav__link" for="__nav_4" id="__nav_4_label" tabindex="0">
+            
+  
+  <span class="md-ellipsis">
+    Resources
+  </span>
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_4_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_4">
+            <span class="md-nav__icon md-icon"></span>
+            Resources
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../../resources/allocations/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Allocations
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../../resources/compute_resources/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Compute Resources
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../../resources/data_center/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Research Data Center
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../../resources/secure_hpc/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Secure Services
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    
+    
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_5" >
+        
+          
+          <label class="md-nav__link" for="__nav_5" id="__nav_5_label" tabindex="0">
+            
+  
+  <span class="md-ellipsis">
+    Access
+  </span>
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_5_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_5">
+            <span class="md-nav__icon md-icon"></span>
+            Access
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../../registration_and_access/account_creation/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Account Creation
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../../registration_and_access/account_deletion/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Account Deletion
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../../registration_and_access/group_management/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Group Management
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../../registration_and_access/system_access/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    System Access
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../../registration_and_access/system_overview/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    System Layout
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../../registration_and_access/vpn/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    VPN
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    
+    
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_6" >
+        
+          
+          <label class="md-nav__link" for="__nav_6" id="__nav_6_label" tabindex="0">
+            
+  
+  <span class="md-ellipsis">
+    Storage and Transfers
+  </span>
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_6_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_6">
+            <span class="md-nav__icon md-icon"></span>
+            Storage and Transfers
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    
+    
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_6_1" >
+        
+          
+          <label class="md-nav__link" for="__nav_6_1" id="__nav_6_1_label" tabindex="0">
+            
+  
+  <span class="md-ellipsis">
+    Storage
+  </span>
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_6_1_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_6_1">
+            <span class="md-nav__icon md-icon"></span>
+            Storage
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../../storage_and_transfers/storage/overview/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Overview
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../../storage_and_transfers/storage/hpc_storage/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    HPC Storage
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../../storage_and_transfers/storage/rental_storage/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Rental Storage
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../../storage_and_transfers/storage/rdas_storage/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    R-DAS Storage
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../../storage_and_transfers/storage/tier2_storage/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Tier2 AWS Storage
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    
+    
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_6_2" >
+        
+          
+          <label class="md-nav__link" for="__nav_6_2" id="__nav_6_2_label" tabindex="0">
+            
+  
+  <span class="md-ellipsis">
+    Transfers
+  </span>
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_6_2_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_6_2">
+            <span class="md-nav__icon md-icon"></span>
+            Transfers
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../../storage_and_transfers/transfers/overview/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Overview
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../../storage_and_transfers/transfers/open_on_demand/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Open OnDemand
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../../storage_and_transfers/transfers/cyberduck/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Cyberduck
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../../storage_and_transfers/transfers/sftp_ftp_lftp/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    FTP/LFTP/SFTP
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../../storage_and_transfers/transfers/globus/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Globus
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../../storage_and_transfers/transfers/irods/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    iRODS
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../../storage_and_transfers/transfers/rsync/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Rsync
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../../storage_and_transfers/transfers/rclone/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Rclone
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../../storage_and_transfers/transfers/scp/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    SCP
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    
+    
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_7" >
+        
+          
+          <label class="md-nav__link" for="__nav_7" id="__nav_7_label" tabindex="0">
+            
+  
+  <span class="md-ellipsis">
+    Software
+  </span>
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_7_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_7">
+            <span class="md-nav__icon md-icon"></span>
+            Software
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../../software/overview/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Overview
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../../software/modules/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Modules
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../../software/user_installations/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    User Installations
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../../software/common_datasets/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Common Datasets
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    
+    
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_7_5" >
+        
+          
+          <label class="md-nav__link" for="__nav_7_5" id="__nav_7_5_label" tabindex="0">
+            
+  
+  <span class="md-ellipsis">
+    Popular Software
+  </span>
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_7_5_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_7_5">
+            <span class="md-nav__icon md-icon"></span>
+            Popular Software
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../../software/popular_software/anaconda/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Anaconda
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../../software/popular_software/gaussian/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Gaussian
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../../software/popular_software/matlab/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Matlab
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../../software/popular_software/perl/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Perl
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../../software/popular_software/python/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Python
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../../software/popular_software/R/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    R
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../../software/popular_software/vscode_remote_connection/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    VSCode Remote Connection
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    
+    
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_7_6" >
+        
+          
+          <label class="md-nav__link" for="__nav_7_6" id="__nav_7_6_label" tabindex="0">
+            
+  
+  <span class="md-ellipsis">
+    Containers
+  </span>
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_7_6_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_7_6">
+            <span class="md-nav__icon md-icon"></span>
+            Containers
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../../software/containers/what_are_containers/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    What are Containers
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../../software/containers/containers_on_hpc/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Containers on HPC
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../../software/containers/pulling_containers/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Pulling Containers
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../../software/containers/building_containers/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Building Containers
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../../software/containers/using_containers/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Using Containers
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+    
+      
+      
+  
+  
+    
+  
+  
+  
+    
+    
+    
+    
+    <li class="md-nav__item md-nav__item--active md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_8" checked>
+        
+          
+          <label class="md-nav__link" for="__nav_8" id="__nav_8_label" tabindex="0">
+            
+  
+  <span class="md-ellipsis">
+    Running Jobs
+  </span>
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_8_label" aria-expanded="true">
+          <label class="md-nav__title" for="__nav_8">
+            <span class="md-nav__icon md-icon"></span>
+            Running Jobs
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../overview/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Overview
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../job_limits/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Job Limits
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../cpus_and_memory/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    CPUs and Memory
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../open_on_demand/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Open OnDemand/Graphical Jobs
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../interactive_jobs/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Interactive Jobs
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    
+    
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_8_6" >
+        
+          
+          <label class="md-nav__link" for="__nav_8_6" id="__nav_8_6_label" tabindex="0">
+            
+  
+  <span class="md-ellipsis">
+    Batch Jobs
+  </span>
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_8_6_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_8_6">
+            <span class="md-nav__icon md-icon"></span>
+            Batch Jobs
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../batch_jobs/intro/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Intro to Batch
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../batch_jobs/batch_directives/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Batch Directives
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../batch_jobs/environment_variables/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Environment Variables
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../batch_jobs/array_jobs/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Array Jobs
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../batch_jobs/submitting_jobs/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Submitting Jobs
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../monitoring_jobs_and_resources/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Monitoring Jobs and Resources
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../parallelization/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Parallelization
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+    
+  
+  
+  
+    
+    
+    
+    
+    <li class="md-nav__item md-nav__item--active md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_8_9" checked>
+        
+          
+          <label class="md-nav__link" for="__nav_8_9" id="__nav_8_9_label" tabindex="0">
+            
+  
+  <span class="md-ellipsis">
+    Visualization
+  </span>
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_8_9_label" aria-expanded="true">
+          <label class="md-nav__title" for="__nav_8_9">
+            <span class="md-nav__icon md-icon"></span>
+            Visualization
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../index.md" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Intro
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    
+    
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_8_9_2" >
+        
+          
+          <label class="md-nav__link" for="__nav_8_9_2" id="__nav_8_9_2_label" tabindex="0">
+            
+  
+  <span class="md-ellipsis">
+    Blender
+  </span>
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="3" aria-labelledby="__nav_8_9_2_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_8_9_2">
+            <span class="md-nav__icon md-icon"></span>
+            Blender
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../blender/command_line_rendering/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Blender Command Line Rendering
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../blender/scaling_up_blender_rendering/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Scaling Up Blender Rendering
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+    
+  
+  
+  
+    
+    
+    
+    
+    <li class="md-nav__item md-nav__item--active md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_8_9_3" checked>
+        
+          
+          <label class="md-nav__link" for="__nav_8_9_3" id="__nav_8_9_3_label" tabindex="0">
+            
+  
+  <span class="md-ellipsis">
+    Paraview
+  </span>
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="3" aria-labelledby="__nav_8_9_3_label" aria-expanded="true">
+          <label class="md-nav__title" for="__nav_8_9_3">
+            <span class="md-nav__icon md-icon"></span>
+            Paraview
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../blender/index.md" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Intro
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../Essential%20Ideas%20for%20ParaView/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Essential Ideas
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../Getting%20Started%20With%20ParaView/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Getting Started
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../Advanced%20Computational%20Geometry%20in%20Paraview%20with%20CGAL%20%26%20Vespa/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    CGAl Vespa
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+    
+  
+  
+  
+    <li class="md-nav__item md-nav__item--active">
+      
+      <input class="md-nav__toggle md-toggle" type="checkbox" id="__toc">
+      
+      
+      
+        <label class="md-nav__link md-nav__link--active" for="__toc">
+          
+  
+  <span class="md-ellipsis">
+    Paraview Python Plugins
+  </span>
+  
+
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <a href="./" class="md-nav__link md-nav__link--active">
+        
+  
+  <span class="md-ellipsis">
+    Paraview Python Plugins
+  </span>
+  
+
+      </a>
+      
+        
+
+<nav class="md-nav md-nav--secondary" aria-label="Table of contents">
+  
+  
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Table of contents
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#example-plugin-1" class="md-nav__link">
+    <span class="md-ellipsis">
+      Example Plugin 1
+    </span>
+  </a>
+  
+</li>
+      
+    </ul>
+  
+</nav>
+      
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../Getting%20Started%20With%20The%20Paraview%20Terminal%20%28PvPython%29/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Getting Started with Paraview Terminal
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../Graphs%20and%20Exporting%20Data/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Graphs and Exporting Data
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../ParaView%20Cameras%20and%20Keyframes/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Cameras and Keyframes
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../Paraview%20Headless%20Batch%20Rendering/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Headless Batch Rendering
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../Speeding%20up%20Filters%20%26%20Rendering%20with%20Client%20Server%20configurations/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Speeding up Filters & Rendering with Client Server configurations
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../Visualizing%20NetCDF%20Files/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Visualizing NetCDF Files
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../paratestimages/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Paratest images
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../creating_heightmaps_arcgis/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Arcgis Pro Heightmaps
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../VisIt/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    VisIt
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    
+    
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_9" >
+        
+          
+          <label class="md-nav__link" for="__nav_9" id="__nav_9_label" tabindex="0">
+            
+  
+  <span class="md-ellipsis">
+    Support
+  </span>
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_9_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_9">
+            <span class="md-nav__icon md-icon"></span>
+            Support
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../../support_and_training/consulting_services/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Consulting Services
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../../support_and_training/people/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Support Staff
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../../support_and_training/faqs/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    FAQs
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../../support_and_training/glossary/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Glossary
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../../support_and_training/cheat_sheet/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Linux Cheat Sheet
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../../support_and_training/grants/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Grants
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../../support_and_training/external_resources/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Community and External Resources
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../../support_and_training/website_accessibility/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Website Accessibility
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    
+    
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_10" >
+        
+          
+          <label class="md-nav__link" for="__nav_10" id="__nav_10_label" tabindex="0">
+            
+  
+  <span class="md-ellipsis">
+    Events and Workshops
+  </span>
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_10_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_10">
+            <span class="md-nav__icon md-icon"></span>
+            Events and Workshops
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../../events/calendar/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Calendar
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../../events/workshop_materials/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    HPC Workshop Materials
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../../results/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Results
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+    
+  </ul>
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+            
+          
+          
+            <div class="md-content" data-md-component="content">
+              <article class="md-content__inner md-typeset">
+                
+                  
+
+  
+  
+
+
+  <h1>Paraview Python Plugins</h1>
+
+<p>If you've spent more than a minute with Paraview you're already aware
+that there are some things that could use a little more explanation.
+There's really just too much to cover in the depth that most
+beginners/intermediate users need. This page is meant to help shed a
+little bit of light on another subject that is shrouded in a deep layer
+of mystery, namely making plugins with Python. Unfortunately, this
+tutorial is not without sections that are less well understood, but
+hopefully in between those sections there's some value!</p>
+<p>For many purposes it might be useful to look through examples of scripts
+and plugins, so for access to an ever evolving scratch space of these
+kinds of files please refer to
+<a href="https://github.com/DevinBayly/paraview_code" class="external-link">https://github.com/DevinBayly/paraview_code</a>.</p>
+<p>Before going to much further just know this page will not document or
+explain things like the decoration options that create widgets for
+filter options. In fact, there are quite a few things related to the
+@prefixing of methods that won't be discussed until a later date. Due to
+this limitation it may be useful to layout upfront that much of the true
+instructional material is captured in comments on the source code from
+this location.
+<a href="https://github.com/Kitware/ParaView/blob/cdb6fa76693885dd14af49d91d9b6177710f7267/Examples/Plugins/PythonAlgorithm/PythonAlgorithmExamples.py" class="external-link">https://github.com/Kitware/ParaView/blob/cdb6fa76693885dd14af49d91d9b6177710f7267/Examples/Plugins/PythonAlgorithm/PythonAlgorithmExamples.py</a>
+and more generally
+<a href="https://github.com/Kitware/ParaView/tree/cdb6fa76693885dd14af49d91d9b6177710f7267/Examples/Plugins" class="external-link">https://github.com/Kitware/ParaView/tree/cdb6fa76693885dd14af49d91d9b6177710f7267/Examples/Plugins</a>.</p>
+<h3 id="example-plugin-1">Example Plugin 1</h3>
+<p><a href="https://github.com/DevinBayly/paraview_code/blob/main/time_series_reader_plugin.py" class="external-link">https://github.com/DevinBayly/paraview_code/blob/main/time_series_reader_plugin.py</a></p>
+<p>This plugin was designed to make it possible to point paraview to a
+folder of python numpy array files that each store a point cloud at a
+particular moment in time. The benefit of using this plugin is that now
+in paraview as we scrub through a timeline interface element the plugin
+will load new numpy files and update the viewport. The sections that
+follow will attempt to explain what the different methods of the plugin
+do, and this will ideally provide departure points for reader's own
+usecases.</p>
+<p>First the entire source is shown and then the step by step sections will
+follow</p>
+<pre><code>"""This module demonstrates various ways of adding
+VTKPythonAlgorithmBase subclasses as filters, sources, readers,
+and writers in ParaView"""
+
+
+# This is module to import. It provides VTKPythonAlgorithmBase, the base class
+# for all python-based vtkAlgorithm subclasses in VTK and decorators used to
+# 'register' the algorithm with ParaView along with information about UI.
+from paraview.util.vtkAlgorithm import *
+import uuid
+from pathlib import Path
+
+
+
+#------------------------------------------------------------------------------
+# A reader example.
+#------------------------------------------------------------------------------
+def createModifiedCallback(anobject):
+    import weakref
+    weakref_obj = weakref.ref(anobject)
+    anobject = None
+    def _markmodified(*args, **kwars):
+        o = weakref_obj()
+        if o is not None:
+            o.Modified()
+    return _markmodified
+
+# To add a reader, we can use the following decorators
+#   @smproxy.source(name="PythonnumpyReader", label="Python-based numpy Reader")
+#   @smhint.xml("""&lt;ReaderFactory extensions="csv" file_description="Numpy numpy files" /&gt;""")
+# or directly use the "@reader" decorator.
+@smproxy.reader(name="Sama Lidar Numpy Reader", label="Python-based numpy pcd Reader for timeseries data",
+                extensions="npy",
+                 file_description="numpy files")
+class PythonNumpyPCDReader(VTKPythonAlgorithmBase):
+    """A reader that reads a numpy file. If the numpy has a "time" column, then
+    the data is treated as a temporal dataset"""
+    def __init__(self):
+        VTKPythonAlgorithmBase.__init__(self, nInputPorts=0, nOutputPorts=1, outputType='vtkPolyData')
+        self._filename = None
+        self._ndata = None
+        self._timesteps = None
+        print("starting",uuid.uuid1())
+
+        from vtkmodules.vtkCommonCore import vtkDataArraySelection
+        self._arrayselection = vtkDataArraySelection()
+        self._arrayselection.AddObserver("ModifiedEvent", createModifiedCallback(self))
+
+    def _get_raw_data(self, requested_time=None):
+        import numpy
+        if self._ndata is not None:
+            if requested_time is not None:
+                ##### load specific npy file from fnmes
+                fname = self.fnames[int(requested_time)]
+                self._ndata = numpy.load(fname)
+                print(self._ndata.dtype)
+                # self._ndata.dtype = numpy.dtype([("x",numpy.float32),("y",numpy.float32),("z",numpy.float32),("intensity",numpy.float32)])
+                return self._ndata
+            return self._ndata
+
+        if self._filename is None:
+            # Note, exceptions are totally fine!
+            raise RuntimeError("No filename specified")
+
+        # self._ndata = numpy.genfromtxt(self._filename, dtype=None, names=True, delimiter=',', autostrip=True)
+        self.pth = Path(self._filename)
+        self.fnames = list(self.pth.parent.rglob("*npy"))
+        self.fnames.sort()
+        times =  [i for i,e in enumerate(self.fnames)]
+        self._ndata = 0
+        self._timesteps = times
+
+        return self._get_raw_data(requested_time)
+
+    def _get_timesteps(self):
+        self._get_raw_data()
+        return self._timesteps if self._timesteps is not None else None
+
+    def _get_update_time(self, outInfo):
+        executive = self.GetExecutive()
+        timesteps = self._get_timesteps()
+        if timesteps is None or len(timesteps) == 0:
+            return None
+        elif outInfo.Has(executive.UPDATE_TIME_STEP()) and len(timesteps) &gt; 0:
+            utime = outInfo.Get(executive.UPDATE_TIME_STEP())
+            print("using inner method get update time",utime)
+            dtime = timesteps[0]
+            for atime in timesteps:
+                if atime &gt; utime:
+                    return dtime
+                else:
+                    dtime = atime
+            return dtime
+        else:
+            assert(len(timesteps) &gt; 0)
+            return timesteps[0]
+
+    def _get_array_selection(self):
+        return self._arrayselection
+
+    @smproperty.stringvector(name="FileName")
+    @smdomain.filelist()
+    @smhint.filechooser(extensions="npy", file_description="numpy pcd file")
+    def SetFileName(self, name):
+        """Specify filename for the file to read."""
+        print(name)
+        if self._filename != name:
+            self._filename = name
+            self._ndata = None
+            self._timesteps = None
+            self.Modified()
+
+    @smproperty.doublevector(name="TimestepValues", information_only="1", si_class="vtkSITimeStepsProperty")
+    def GetTimestepValues(self):
+        print("getting time steps")
+        return self._get_timesteps()
+
+    # Array selection API is typical with readers in VTK
+    # This is intended to allow ability for users to choose which arrays to
+    # load. To expose that in ParaView, simply use the
+    # smproperty.dataarrayselection().
+    # This method **must** return a `vtkDataArraySelection` instance.
+    @smproperty.dataarrayselection(name="Arrays")
+    def GetDataArraySelection(self):
+        return self._get_array_selection()
+
+    def RequestInformation(self, request, inInfoVec, outInfoVec):
+        print("requesting information")
+        executive = self.GetExecutive()
+        outInfo = outInfoVec.GetInformationObject(0)
+        outInfo.Remove(executive.TIME_STEPS())
+        outInfo.Remove(executive.TIME_RANGE())
+
+        timesteps = self._get_timesteps()
+        if timesteps is not None:
+            for t in timesteps:
+                outInfo.Append(executive.TIME_STEPS(), t)
+            outInfo.Append(executive.TIME_RANGE(), timesteps[0])
+            outInfo.Append(executive.TIME_RANGE(), timesteps[-1])
+        return 1
+
+    def RequestData(self, request, inInfoVec, outInfoVec):
+        print("requesting data")
+        from vtkmodules.vtkCommonDataModel import vtkPolyData
+        from vtkmodules.numpy_interface import dataset_adapter as dsa
+        import vtk
+
+        data_time = self._get_update_time(outInfoVec.GetInformationObject(0))
+
+        output = dsa.WrapDataObject(vtkPolyData.GetData(outInfoVec, 0))
+        points = self._get_raw_data(data_time)
+        #points = self._ndata
+
+        vpoints = vtk.vtkPoints()
+        vpoints.SetNumberOfPoints(points.shape[0])
+        intensity = vtk.vtkFloatArray()
+        intensity.SetNumberOfComponents(1)
+        intensity.SetName("Intensity")
+        intensity.SetNumberOfTuples(points.shape[0])
+        for i in range(points.shape[0]):
+            vpoints.SetPoint(i, points[i][:3])
+            intensity.SetTuple1(i, points[i][3])
+
+        output.GetPointData().SetScalars(intensity)
+
+        output.SetPoints(vpoints)
+
+        vcells = vtk.vtkCellArray()
+
+        for i in range(points.shape[0]):
+            vcells.InsertNextCell(1)
+            vcells.InsertCellPoint(i)
+
+        output.SetVerts(vcells)
+
+        if data_time is not None:
+            output.GetInformation().Set(output.DATA_TIME_STEP(), data_time)
+        return 1
+</code></pre>
+<p>Breaking this down we will begin with a helper function from the top</p>
+<pre><code>"""This module demonstrates various ways of adding
+VTKPythonAlgorithmBase subclasses as filters, sources, readers,
+and writers in ParaView"""
+
+
+# This is module to import. It provides VTKPythonAlgorithmBase, the base class
+# for all python-based vtkAlgorithm subclasses in VTK and decorators used to
+# 'register' the algorithm with ParaView along with information about UI.
+from paraview.util.vtkAlgorithm import *
+import uuid
+from pathlib import Path
+
+
+
+#------------------------------------------------------------------------------
+# A reader example.
+#------------------------------------------------------------------------------
+def createModifiedCallback(anobject):
+    import weakref
+    weakref_obj = weakref.ref(anobject)
+    anobject = None
+    def _markmodified(*args, **kwars):
+        o = weakref_obj()
+        if o is not None:
+            o.Modified()
+    return _markmodified
+</code></pre>
+<p>Starting off with a bit of a still unclear boilerplate helper function.
+Best guess is this function is used later in the class to make sure that
+paraview tracks that our object (numpy point cloud) has been modified,
+and the downstream rendering updates need to happen. This may be because
+paraview has a lazy pipeline evaluation implementation, where filters in
+the processing pipeline only evaluate when changes have occurred.</p>
+<p>Now lets inspect the beginning of the actual class defining the numpy
+array reader plugin.</p>
+<p>So this class can be named whatever we like, but it must inherit from
+the python algorithm base. In my case I've filled in some of the values
+in the header so that the reader works with "npy" extension files.</p>
+<p>As with other inherited classes in python it makes sense to initalize
+the parent class within the subclasses `init` method.</p>
+<p>The lines creating member variables are used later on within the class
+methods, but aren't intended to be accessed by the user so they start
+with underscores.</p>
+<p>The print statement is also just a sanity check that we have started the
+initialization of the plugin prior reading in an actual file. It's nice
+for development's sake to have a message that looks slightly different
+if changes to the source are made and the plugin is reloaded.</p>
+<pre><code># To add a reader, we can use the following decorators
+#   @smproxy.source(name="PythonnumpyReader", label="Python-based numpy Reader")
+#   @smhint.xml("""&lt;ReaderFactory extensions="csv" file_description="Numpy numpy files" /&gt;""")
+# or directly use the "@reader" decorator.
+@smproxy.reader(name="Sama Lidar Numpy Reader", label="Python-based numpy pcd Reader for timeseries data",
+                extensions="npy",
+                 file_description="numpy files")
+class PythonNumpyPCDReader(VTKPythonAlgorithmBase):
+    """A reader that reads a numpy file. If the numpy has a "time" column, then
+    the data is treated as a temporal dataset"""
+    def __init__(self):
+        VTKPythonAlgorithmBase.__init__(self, nInputPorts=0, nOutputPorts=1, outputType='vtkPolyData')
+        self._filename = None
+        self._ndata = None
+        self._timesteps = None
+        print("starting",uuid.uuid1())
+
+        from vtkmodules.vtkCommonCore import vtkDataArraySelection
+        self._arrayselection = vtkDataArraySelection()
+        self._arrayselection.AddObserver("ModifiedEvent", createModifiedCallback(self))
+</code></pre>
+<p>This method is used by a different non private method, but is intended
+to respond to paraview's requests to get data. These requests are
+usually the result of something in the pipeline before a filter
+changing, or in our case having a new timestamp selected from the
+animation window.</p>
+<p>We are importing numpy here because we will be loading filenames and in
+some cases changing the data type of the array. If the point cloud
+(taken from a lidar) was not just point positions but also intensity it
+becomes easier to access the intensity as a attribute for rendering if
+we make the array a named datatype array.</p>
+<p>The top of the method handles cases when we have already read the
+initial time point and are querying for new data. If we already have
+data in the member variable _ndata, and the requested_time was
+provided when the method was called then we use that information to look
+up another file from a list of filenames (self.fnames).</p>
+<p>NOTE, this code is written for a case when the timeline is using
+positive integer time steps. This means that we can use the
+requested_time as an index into the filenames list to load the
+requested timesteps point cloud. If you have floating point timeline
+values a different approach will be required.</p>
+<p>Later in the method is the code that is used when we are getting the raw
+data for the first time. We take the user selected file from the
+filebrowser and work out the path to the parent folder. Then we get a
+list of the contents of this folder that match the extension that we
+care about in this file reader. We can then fill in the member variables
+for _ndata and _timesteps.  At this point we now can re-issue the call
+to this method and it will take a different path through loading data
+from the numpy array out of a file. This allows us to still make use of
+the same code that all other invocations will use even though this time
+the method wasn't called in response to a change in the timeline.</p>
+<pre><code>    def _get_raw_data(self, requested_time=None):
+        import numpy
+        if self._ndata is not None:
+            if requested_time is not None:
+                ##### load specific npy file from fnmes
+                fname = self.fnames[int(requested_time)]
+                self._ndata = numpy.load(fname)
+                print(self._ndata.dtype)
+                # self._ndata.dtype = numpy.dtype([("x",numpy.float32),("y",numpy.float32),("z",numpy.float32),("intensity",numpy.float32)])
+                return self._ndata
+            return self._ndata
+
+        if self._filename is None:
+            # Note, exceptions are totally fine!
+            raise RuntimeError("No filename specified")
+
+        # self._ndata = numpy.genfromtxt(self._filename, dtype=None, names=True, delimiter=',', autostrip=True)
+        self.pth = Path(self._filename)
+        self.fnames = list(self.pth.parent.rglob("*npy"))
+        self.fnames.sort()
+        times =  [i for i,e in enumerate(self.fnames)]
+        self._ndata = 0
+        self._timesteps = times
+
+        return self._get_raw_data(requested_time)
+</code></pre>
+<p>After the last method you get a break since this one is much shorter.
+When we looking to find out how many timesteps there are in the
+animation we need to know how many files are in the folder we are
+processing. The logic there is that we want a time step per file. In
+support of this we issue a call to the previous method _get_raw_data
+because that's what creates the member variable _timesteps .</p>
+<pre><code>    def _get_timesteps(self):
+        self._get_raw_data()
+        return self._timesteps if self._timesteps is not None else None
+</code></pre>
+<p>This method for the most part is just recommended paraview python code
+straight from their section about python programmable filters.
+<a href="https://docs.paraview.org/en/latest/ReferenceManual/pythonProgrammableFilter.html#reading-a-csv-file-series" class="external-link">https://docs.paraview.org/en/latest/ReferenceManual/pythonProgrammableFilter.html#reading-a-csv-file-series</a>.
+Essentially it just returns back the updated time making sure its less
+than the values within the timesteps provided, otherwise it gives back
+the initial timestep.</p>
+<p>The _get_array_selection(self) method is included here too just
+because it's a one liner. I think this code might be dead as it's not
+actually getting set to anything in my case as far as I know. The
+_arrayselection is set in the init, but doesn't appear explicitly
+anywhere else.</p>
+<pre><code>    def _get_update_time(self, outInfo):
+        executive = self.GetExecutive()
+        timesteps = self._get_timesteps()
+        if timesteps is None or len(timesteps) == 0:
+            return None
+        elif outInfo.Has(executive.UPDATE_TIME_STEP()) and len(timesteps) &gt; 0:
+            utime = outInfo.Get(executive.UPDATE_TIME_STEP())
+            print("using inner method get update time",utime)
+            dtime = timesteps[0]
+            for atime in timesteps:
+                if atime &gt; utime:
+                    return dtime
+                else:
+                    dtime = atime
+            return dtime
+        else:
+            assert(len(timesteps) &gt; 0)
+            return timesteps[0]
+
+    def _get_array_selection(self):
+        return self._arrayselection
+
+
+    # Array selection API is typical with readers in VTK
+    # This is intended to allow ability for users to choose which arrays to
+    # load. To expose that in ParaView, simply use the
+    # smproperty.dataarrayselection().
+    # This method **must** return a `vtkDataArraySelection` instance.
+    @smproperty.dataarrayselection(name="Arrays")
+    def GetDataArraySelection(self):
+        return self._get_array_selection()
+</code></pre>
+<p>This is the next most important part where we are actually setting a
+filename using a widget. This method will receive values back after the
+user selects a file in the filebrowser. To trigger all this they must
+load the plugin and then use the "open" button. Once they select a file
+who's extension matches with this, the custom plugin reader will show up
+with any others that match the extension. Last I checked there weren't
+any others that were stepping forward to handle numpy array input.</p>
+<p>This method just checks whether the same file has been loaded twice, and
+then sets itself to modified to trigger the subsequent loading and
+rendering steps.</p>
+<pre><code>    @smproperty.stringvector(name="FileName")
+    @smdomain.filelist()
+    @smhint.filechooser(extensions="npy", file_description="numpy pcd file")
+    def SetFileName(self, name):
+        """Specify filename for the file to read."""
+        print(name)
+        if self._filename != name:
+            self._filename = name
+            self._ndata = None
+            self._timesteps = None
+            self.Modified()
+</code></pre>
+<p>This is the public wrapper of the _get_timesteps() method which will
+be called after using the reader on a file that matches the extension
+supported. This method needs to be implemented for the algorithm class
+we are inheriting from to work correctly.  </p>
+<pre><code>    @smproperty.doublevector(name="TimestepValues", information_only="1", si_class="vtkSITimeStepsProperty")
+    def GetTimestepValues(self):
+        print("getting time steps")
+        return self._get_timesteps()
+</code></pre>
+<p>This method is another of the ones that must be extended in the child
+class for the parent to work. This specifically is a method that
+responds to the changes in the timeline. For more information on this
+request for information please read lower down in this section
+<a href="https://docs.paraview.org/en/latest/ReferenceManual/pythonProgrammableFilter.html#understanding-the-programmable-modules" class="external-link">https://docs.paraview.org/en/latest/ReferenceManual/pythonProgrammableFilter.html#understanding-the-programmable-modules</a>.
+It will talk about how the RequestInformation is actually part of a
+"pass in the pipeline's execution." Essentially this helps paraview know
+that the reader plugin can provide more data at different timesteps.
+This method will also ensure that the animation timeline gets set to the
+right length as far as I know.</p>
+<pre><code>    def RequestInformation(self, request, inInfoVec, outInfoVec):
+        print("requesting information")
+        executive = self.GetExecutive()
+        outInfo = outInfoVec.GetInformationObject(0)
+        outInfo.Remove(executive.TIME_STEPS())
+        outInfo.Remove(executive.TIME_RANGE())
+
+        timesteps = self._get_timesteps()
+        if timesteps is not None:
+            for t in timesteps:
+                outInfo.Append(executive.TIME_STEPS(), t)
+            outInfo.Append(executive.TIME_RANGE(), timesteps[0])
+            outInfo.Append(executive.TIME_RANGE(), timesteps[-1])
+        return 1
+</code></pre>
+<p>You've almost made it! The last method does almost all the heavy
+lifting. This again is covered in the section on programmable sources,
+and gives paraview back something to show at the end of the execution
+pass.</p>
+<p>We load in several packages that are required to convert to vtk
+datatypes from numpy.</p>
+<p>Then we get the time that we are supposed to load as a point cloud.</p>
+<p>We must have a variable representing the output on which to set our
+results so that paraview can show them.</p>
+<p>Then we get the actual numpy array representing the points in the point
+cloud for a particular data_time</p>
+<p>Then we construct a vpoints variable which is an empty vtk point set
+with an expected number of points matching the number in our numpy data.</p>
+<p>If our data set has an intensity attribute then we can create a separate
+float array that will be set as a scalar point data on the output.</p>
+<p>After that we need to set up the correct cell to be shown in paraview.
+As I understand it, this part is standard vtk python coding. Once the
+output has it's cells set we are done.</p>
+<pre><code>    def RequestData(self, request, inInfoVec, outInfoVec):
+        print("requesting data")
+        from vtkmodules.vtkCommonDataModel import vtkPolyData
+        from vtkmodules.numpy_interface import dataset_adapter as dsa
+        import vtk
+
+        data_time = self._get_update_time(outInfoVec.GetInformationObject(0))
+
+        output = dsa.WrapDataObject(vtkPolyData.GetData(outInfoVec, 0))
+        points = self._get_raw_data(data_time)
+        #points = self._ndata
+
+        vpoints = vtk.vtkPoints()
+        vpoints.SetNumberOfPoints(points.shape[0])
+        intensity = vtk.vtkFloatArray()
+        intensity.SetNumberOfComponents(1)
+        intensity.SetName("Intensity")
+        intensity.SetNumberOfTuples(points.shape[0])
+        for i in range(points.shape[0]):
+            vpoints.SetPoint(i, points[i][:3])
+            intensity.SetTuple1(i, points[i][3])
+
+        output.GetPointData().SetScalars(intensity)
+
+        output.SetPoints(vpoints)
+
+        vcells = vtk.vtkCellArray()
+
+        for i in range(points.shape[0]):
+            vcells.InsertNextCell(1)
+            vcells.InsertCellPoint(i)
+
+        output.SetVerts(vcells)
+
+        if data_time is not None:
+            output.GetInformation().Set(output.DATA_TIME_STEP(), data_time)
+        return 1
+</code></pre>
+<p><span id="confluence-server-performance"
+style="display:none;">{"serverDuration": 19, "requestCorrelationId":
+"a3e9db9e220446d8b97041e2bc9c2d8c"}</span></p>
+
+
+
+
+
+
+
+
+
+  
+
+
+
+  <form class="md-feedback" name="feedback" hidden>
+    <fieldset>
+      <legend class="md-feedback__title">
+        Was this page informative?
+      </legend>
+      <div class="md-feedback__inner">
+        <div class="md-feedback__list">
+          
+            <button class="md-feedback__icon md-icon" type="submit" title="This page was helpful" data-md-value="1">
+              <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M23 10a2 2 0 0 0-2-2h-6.32l.96-4.57c.02-.1.03-.21.03-.32 0-.41-.17-.79-.44-1.06L14.17 1 7.59 7.58C7.22 7.95 7 8.45 7 9v10a2 2 0 0 0 2 2h9c.83 0 1.54-.5 1.84-1.22l3.02-7.05c.09-.23.14-.47.14-.73v-2M1 21h4V9H1v12Z"/></svg>
+            </button>
+          
+            <button class="md-feedback__icon md-icon" type="submit" title="This page could be improved" data-md-value="0">
+              <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M19 15h4V3h-4m-4 0H6c-.83 0-1.54.5-1.84 1.22l-3.02 7.05c-.09.23-.14.47-.14.73v2a2 2 0 0 0 2 2h6.31l-.95 4.57c-.02.1-.03.2-.03.31 0 .42.17.79.44 1.06L9.83 23l6.58-6.59c.37-.36.59-.86.59-1.41V5a2 2 0 0 0-2-2Z"/></svg>
+            </button>
+          
+        </div>
+        <div class="md-feedback__note">
+          
+            <div data-md-value="1" hidden>
+              
+              
+                
+              
+              Thanks for your feedback!
+            </div>
+          
+            <div data-md-value="0" hidden>
+              
+              
+                
+              
+              Thanks for your feedback! Have suggestions for improvements? <a target="_blank" href="https://uarizona.service-now.com/sp?id=sc_cat_item&sys_id=2983102adbd23c109627d90d689619c6&sysparm_category=84d3d1acdbc8f4109627d90d6896191f">Contact us</a>. 
+            </div>
+          
+        </div>
+      </div>
+    </fieldset>
+  </form>
+
+
+                
+              </article>
+            </div>
+          
+          
+  <script>var tabs=__md_get("__tabs");if(Array.isArray(tabs))e:for(var set of document.querySelectorAll(".tabbed-set")){var tab,labels=set.querySelector(".tabbed-labels");for(tab of tabs)for(var label of labels.getElementsByTagName("label"))if(label.innerText.trim()===tab){var input=document.getElementById(label.htmlFor);input.checked=!0;continue e}}</script>
+
+<script>var target=document.getElementById(location.hash.slice(1));target&&target.name&&(target.checked=target.name.startsWith("__tabbed_"))</script>
+        </div>
+        
+          <button type="button" class="md-top md-icon" data-md-component="top" hidden>
+  
+  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M13 20h-2V8l-5.5 5.5-1.42-1.42L12 4.16l7.92 7.92-1.42 1.42L13 8v12Z"/></svg>
+  Back to top
+</button>
+        
+      </main>
+      
+<!--
+<div style="padding-right: 40px; padding-bottom:20px; padding-top:10px; text-align: center;">
+    <a href="https://uarizona.service-now.com/sp?id=sc_cat_item&sys_id=2983102adbd23c109627d90d689619c6&sysparm_category=84d3d1acdbc8f4109627d90d6896191f" style="font-size: 16px;color:#AB0520; text-decoration: underline; font-weight: bold;" onmouseover="this.style.color='#EF4056'" onmouseout="this.style.color='#AB0520'">Website Feedback</a>
+  </div>
+-->
+
+<footer class="md-footer">
+    <div class="md-footer-meta md-typeset">
+        <div class="md-footer-meta__inner md-grid">
+            <!-- Copyright and theme information -->
+            <div class="md-copyright">
+                
+                <div class="md-copyright__highlight">
+                    University of Arizona Research Computing
+                </div>
+                
+
+            </div>
+            
+            <div class="md-social">
+  
+    
+    
+    
+    
+    <a href="https://uarizona.service-now.com/sp?id=sc_cat_item&sys_id=2983102adbd23c109627d90d689619c6&sysparm_category=84d3d1acdbc8f4109627d90d6896191f" target="_blank" rel="noopener" title="Contact HPC consulting" class="md-social__link">
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="m20 8-8 5-8-5V6l8 5 8-5m0-2H4c-1.11 0-2 .89-2 2v12a2 2 0 0 0 2 2h16a2 2 0 0 0 2-2V6a2 2 0 0 0-2-2Z"/></svg>
+    </a>
+  
+    
+    
+    
+    
+    <a href="/support_and_training/faqs/" target="_blank" rel="noopener" title="FAQs" class="md-social__link">
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M16 20v2H4c-1.1 0-2-.9-2-2V7h2v13h12m4-18H8c-1.1 0-2 .9-2 2v12c0 1.1.9 2 2 2h12c1.1 0 2-.9 2-2V4c0-1.1-.9-2-2-2m-5 12h-2v-2h2v2m1.8-5.2c-.3.4-.7.7-1.1.9-.2.2-.4.3-.5.5-.2.2-.2.5-.2.8h-2c0-.5.1-.9.3-1.2.2-.3.5-.6 1-.9.3-.2.5-.4.6-.6.2-.2.2-.5.2-.8 0-.3-.1-.6-.3-.8-.2-.2-.4-.3-.8-.3-.3 0-.5.1-.7.2-.2.2-.3.4-.3.7h-1.9c0-.8.2-1.4.8-1.8.7-.3 1.4-.5 2.3-.5.9 0 1.7.2 2.2.7.5.5.8 1.1.8 1.8 0 .5-.2.9-.4 1.3Z"/></svg>
+    </a>
+  
+    
+    
+    
+    
+    <a href="https://portal.hpc.arizona.edu/portal/" target="_blank" rel="noopener" title="User portal" class="md-social__link">
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 4a4 4 0 0 1 4 4 4 4 0 0 1-4 4 4 4 0 0 1-4-4 4 4 0 0 1 4-4m0 10c4.42 0 8 1.79 8 4v2H4v-2c0-2.21 3.58-4 8-4Z"/></svg>
+    </a>
+  
+    
+    
+    
+    
+    <a href="https://ood.hpc.arizona.edu/pun/sys/dashboard" target="_blank" rel="noopener" title="Open OnDemand" class="md-social__link">
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M16.36 14c.08-.66.14-1.32.14-2 0-.68-.06-1.34-.14-2h3.38c.16.64.26 1.31.26 2s-.1 1.36-.26 2m-5.15 5.56c.6-1.11 1.06-2.31 1.38-3.56h2.95a8.03 8.03 0 0 1-4.33 3.56M14.34 14H9.66c-.1-.66-.16-1.32-.16-2 0-.68.06-1.35.16-2h4.68c.09.65.16 1.32.16 2 0 .68-.07 1.34-.16 2M12 19.96c-.83-1.2-1.5-2.53-1.91-3.96h3.82c-.41 1.43-1.08 2.76-1.91 3.96M8 8H5.08A7.923 7.923 0 0 1 9.4 4.44C8.8 5.55 8.35 6.75 8 8m-2.92 8H8c.35 1.25.8 2.45 1.4 3.56A8.008 8.008 0 0 1 5.08 16m-.82-2C4.1 13.36 4 12.69 4 12s.1-1.36.26-2h3.38c-.08.66-.14 1.32-.14 2 0 .68.06 1.34.14 2M12 4.03c.83 1.2 1.5 2.54 1.91 3.97h-3.82c.41-1.43 1.08-2.77 1.91-3.97M18.92 8h-2.95a15.65 15.65 0 0 0-1.38-3.56c1.84.63 3.37 1.9 4.33 3.56M12 2C6.47 2 2 6.5 2 12a10 10 0 0 0 10 10 10 10 0 0 0 10-10A10 10 0 0 0 12 2Z"/></svg>
+    </a>
+  
+    
+    
+    
+    
+    <a href="https://www.youtube.com/@universityofarizonauitsres7597" target="_blank" rel="noopener" title="Training videos" class="md-social__link">
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="m10 15 5.19-3L10 9v6m11.56-7.83c.13.47.22 1.1.28 1.9.07.8.1 1.49.1 2.09L22 12c0 2.19-.16 3.8-.44 4.83-.25.9-.83 1.48-1.73 1.73-.47.13-1.33.22-2.65.28-1.3.07-2.49.1-3.59.1L12 19c-4.19 0-6.8-.16-7.83-.44-.9-.25-1.48-.83-1.73-1.73-.13-.47-.22-1.1-.28-1.9-.07-.8-.1-1.49-.1-2.09L2 12c0-2.19.16-3.8.44-4.83.25-.9.83-1.48 1.73-1.73.47-.13 1.33-.22 2.65-.28 1.3-.07 2.49-.1 3.59-.1L12 5c4.19 0 6.8.16 7.83.44.9.25 1.48.83 1.73 1.73Z"/></svg>
+    </a>
+  
+    
+    
+    
+    
+    <a href="https://metrics.hpc.arizona.edu/" target="_blank" rel="noopener" title="HPC job metrics" class="md-social__link">
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M17.45 15.18 22 7.31V21H2V3h2v12.54L9.5 6 16 9.78l4.24-7.33 1.73 1-5.23 9.05-6.51-3.75L4.31 19h2.26l4.39-7.56 6.49 3.74Z"/></svg>
+    </a>
+  
+</div>
+            
+        </div>
+    </div>
+</footer>
+
+    </div>
+    <div class="md-dialog" data-md-component="dialog">
+      <div class="md-dialog__inner md-typeset"></div>
+    </div>
+    
+    
+    <script id="__config" type="application/json">{"base": "../../../..", "features": ["navigation.tracking", "navigation.instant", "navigation.path", "toc.integrate", "content.tabs.link", "content.tooltips", "content.code.copy", "content.code.annotate", "content.code.select", "navigation.top"], "search": "../../../../assets/javascripts/workers/search.b8dbb3d2.min.js", "translations": {"clipboard.copied": "Copied to clipboard", "clipboard.copy": "Copy to clipboard", "search.result.more.one": "1 more on this page", "search.result.more.other": "# more on this page", "search.result.none": "No matching documents", "search.result.one": "1 matching document", "search.result.other": "# matching documents", "search.result.placeholder": "Type to start searching", "search.result.term.missing": "Missing", "select.version": "Select version"}}</script>
+    
+    
+      <script src="../../../../assets/javascripts/bundle.ad660dcc.min.js"></script>
+      
+        <script src="../../../../assets/javascripts/mathjax.js"></script>
+      
+        <script src="https://polyfill.io/v3/polyfill.min.js?features=es6"></script>
+      
+        <script src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
+      
+    
+  </body>
+</html>
