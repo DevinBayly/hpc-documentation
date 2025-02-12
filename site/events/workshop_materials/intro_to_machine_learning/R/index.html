@@ -1,0 +1,3994 @@
+<!-- Elements added to main will be displayed on all pages -->
+
+<!doctype html>
+<html lang="en" class="no-js">
+  <head>
+    
+      <meta charset="utf-8">
+      <meta name="viewport" content="width=device-width,initial-scale=1">
+      
+      
+      
+      
+      
+      
+      <link rel="icon" href="../../../../assets/images/favicon.ico">
+      <meta name="generator" content="mkdocs-1.6.1, mkdocs-material-9.6.2">
+    
+    
+      
+        <title>Index - UArizona HPC Documentation</title>
+      
+    
+    
+      <link rel="stylesheet" href="../../../../assets/stylesheets/main.d7758b05.min.css">
+      
+        
+        <link rel="stylesheet" href="../../../../assets/stylesheets/palette.06af60db.min.css">
+      
+      
+
+  
+  
+  
+  
+  <style>:root{--md-annotation-icon:url('data:image/svg+xml;charset=utf-8,<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M8.17 2.76A10.1 10.1 0 0 1 12 2c1.31 0 2.61.26 3.83.76 1.21.5 2.31 1.24 3.24 2.17s1.67 2.03 2.17 3.24c.5 1.22.76 2.52.76 3.83 0 2.65-1.05 5.2-2.93 7.07A9.97 9.97 0 0 1 12 22a10.1 10.1 0 0 1-3.83-.76 10 10 0 0 1-3.24-2.17A9.97 9.97 0 0 1 2 12c0-2.65 1.05-5.2 2.93-7.07.93-.93 2.03-1.67 3.24-2.17M12 17l1.56-3.42L17 12l-3.44-1.56L12 7l-1.57 3.44L7 12l3.43 1.58z"/></svg>');}</style>
+
+
+    
+    
+      
+    
+    
+      
+        
+        
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto:300,300i,400,400i,700,700i%7CRoboto+Mono:400,400i,700,700i&display=fallback">
+        <style>:root{--md-text-font:"Roboto";--md-code-font:"Roboto Mono"}</style>
+      
+    
+    
+      <link rel="stylesheet" href="../../../../assets/stylesheets/extra.css">
+    
+    <script>__md_scope=new URL("../../../..",location),__md_hash=e=>[...e].reduce(((e,_)=>(e<<5)-e+_.charCodeAt(0)),0),__md_get=(e,_=localStorage,t=__md_scope)=>JSON.parse(_.getItem(t.pathname+"."+e)),__md_set=(e,_,t=localStorage,a=__md_scope)=>{try{t.setItem(a.pathname+"."+e,JSON.stringify(_))}catch(e){}}</script>
+    
+      
+  
+
+
+  
+  
+
+<script id="__analytics">function __md_analytics(){function e(){dataLayer.push(arguments)}window.dataLayer=window.dataLayer||[],e("js",new Date),e("config","G-3V0VRBSRZF"),document.addEventListener("DOMContentLoaded",(function(){document.forms.search&&document.forms.search.query.addEventListener("blur",(function(){this.value&&e("event","search",{search_term:this.value})}));document$.subscribe((function(){var t=document.forms.feedback;if(void 0!==t)for(var a of t.querySelectorAll("[type=submit]"))a.addEventListener("click",(function(a){a.preventDefault();var n=document.location.pathname,d=this.getAttribute("data-md-value");e("event","feedback",{page:n,data:d}),t.firstElementChild.disabled=!0;var r=t.querySelector(".md-feedback__note [data-md-value='"+d+"']");r&&(r.hidden=!1)})),t.hidden=!1})),location$.subscribe((function(t){e("config","G-3V0VRBSRZF",{page_path:t.pathname})}))}));var t=document.createElement("script");t.async=!0,t.src="https://www.googletagmanager.com/gtag/js?id=G-3V0VRBSRZF",document.getElementById("__analytics").insertAdjacentElement("afterEnd",t)}</script>
+  
+    <script>"undefined"!=typeof __md_analytics&&__md_analytics()</script>
+  
+
+    
+    
+    
+  </head>
+  
+  
+    
+    
+    
+    
+    
+    <body dir="ltr" data-md-color-scheme="default" data-md-color-primary="custom" data-md-color-accent="custom">
+  
+    
+    <input class="md-toggle" data-md-toggle="drawer" type="checkbox" id="__drawer" autocomplete="off">
+    <input class="md-toggle" data-md-toggle="search" type="checkbox" id="__search" autocomplete="off">
+    <label class="md-overlay" for="__drawer"></label>
+    <div data-md-component="skip">
+      
+        
+        <a href="#intro-to-machine-learning-with-r-on-hpc" class="md-skip">
+          Skip to content
+        </a>
+      
+    </div>
+    <div data-md-component="announce">
+      
+        <aside class="md-banner">
+          <div class="md-banner__inner md-grid md-typeset">
+            
+            
+<p style="font-size: 16px;"> <!--Typically, size is 15px, I've temporarily increased it to bring attention to puma 9 transition-->
+    &#9888; <b>Action Required: Transition to Rocky Linux 9</b>  	&#9888; <br>
+  Puma's migration to Rocky Linux 9 will be completed on Wednesday, January 29th. <br><u><b>If you use Puma and have not migrated yet, do so now to avoid disruptions to your workflows.</b></u> Visit our <a href="/resources/updates/">OS migration documentation</a> for guidance.
+<br><b>Warning:</b> Active jobs on old Puma (CentOS 7) will be <b>terminated</b> on maintenance day. Submit to El Gato, Ocelote, or Puma9 to avoid workflow disruptions.</p>
+
+          </div>
+          
+        </aside>
+      
+    </div>
+    
+    
+      
+
+  
+
+<header class="md-header md-header--shadow" data-md-component="header">
+  <nav class="md-header__inner md-grid" aria-label="Header">
+    <a href="../../../.." title="UArizona HPC Documentation" class="md-header__button md-logo" aria-label="UArizona HPC Documentation" data-md-component="logo">
+      
+  <img src="../../../../assets/images/home/uofa_cactus_computing3.png" alt="logo">
+
+    </a>
+    <label class="md-header__button md-icon" for="__drawer">
+      
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M3 6h18v2H3zm0 5h18v2H3zm0 5h18v2H3z"/></svg>
+    </label>
+    <div class="md-header__title" data-md-component="header-title">
+      <div class="md-header__ellipsis">
+        <div class="md-header__topic">
+          <span class="md-ellipsis">
+            UArizona HPC Documentation
+          </span>
+        </div>
+        <div class="md-header__topic" data-md-component="header-topic">
+          <span class="md-ellipsis">
+            
+              Index
+            
+          </span>
+        </div>
+      </div>
+    </div>
+    
+      
+    
+    
+    
+    
+      <label class="md-header__button md-icon" for="__search">
+        
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.52 6.52 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5"/></svg>
+      </label>
+      <div class="md-search" data-md-component="search" role="dialog">
+  <label class="md-search__overlay" for="__search"></label>
+  <div class="md-search__inner" role="search">
+    <form class="md-search__form" name="search">
+      <input type="text" class="md-search__input" name="query" aria-label="Search" placeholder="Search" autocapitalize="off" autocorrect="off" autocomplete="off" spellcheck="false" data-md-component="search-query" required>
+      <label class="md-search__icon md-icon" for="__search">
+        
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.52 6.52 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5"/></svg>
+        
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11z"/></svg>
+      </label>
+      <nav class="md-search__options" aria-label="Search">
+        
+        <button type="reset" class="md-search__icon md-icon" title="Clear" aria-label="Clear" tabindex="-1">
+          
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M19 6.41 17.59 5 12 10.59 6.41 5 5 6.41 10.59 12 5 17.59 6.41 19 12 13.41 17.59 19 19 17.59 13.41 12z"/></svg>
+        </button>
+      </nav>
+      
+    </form>
+    <div class="md-search__output">
+      <div class="md-search__scrollwrap" tabindex="0" data-md-scrollfix>
+        <div class="md-search-result" data-md-component="search-result">
+          <div class="md-search-result__meta">
+            Initializing search
+          </div>
+          <ol class="md-search-result__list" role="presentation"></ol>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+    
+    
+      <div class="md-header__source">
+        <a href="https://github.com/UA-ResearchComputing-HPC/hpc-documentation" title="Go to repository" class="md-source" data-md-component="source">
+  <div class="md-source__icon md-icon">
+    
+    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512"><!--! Font Awesome Free 6.7.2 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License) Copyright 2024 Fonticons, Inc.--><path d="M439.55 236.05 244 40.45a28.87 28.87 0 0 0-40.81 0l-40.66 40.63 51.52 51.52c27.06-9.14 52.68 16.77 43.39 43.68l49.66 49.66c34.23-11.8 61.18 31 35.47 56.69-26.49 26.49-70.21-2.87-56-37.34L240.22 199v121.85c25.3 12.54 22.26 41.85 9.08 55a34.34 34.34 0 0 1-48.55 0c-17.57-17.6-11.07-46.91 11.25-56v-123c-20.8-8.51-24.6-30.74-18.64-45L142.57 101 8.45 235.14a28.86 28.86 0 0 0 0 40.81l195.61 195.6a28.86 28.86 0 0 0 40.8 0l194.69-194.69a28.86 28.86 0 0 0 0-40.81"/></svg>
+  </div>
+  <div class="md-source__repository">
+    GitHub
+  </div>
+</a>
+      </div>
+    
+  </nav>
+  
+</header>
+    
+    <div class="md-container" data-md-component="container">
+      
+      
+        
+          
+        
+      
+      <main class="md-main" data-md-component="main">
+        <div class="md-main__inner md-grid">
+          
+            
+              
+              <div class="md-sidebar md-sidebar--primary" data-md-component="sidebar" data-md-type="navigation" >
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    
+
+
+
+  
+
+<nav class="md-nav md-nav--primary md-nav--integrated" aria-label="Navigation" data-md-level="0">
+  <label class="md-nav__title" for="__drawer">
+    <a href="../../../.." title="UArizona HPC Documentation" class="md-nav__button md-logo" aria-label="UArizona HPC Documentation" data-md-component="logo">
+      
+  <img src="../../../../assets/images/home/uofa_cactus_computing3.png" alt="logo">
+
+    </a>
+    UArizona HPC Documentation
+  </label>
+  
+    <div class="md-nav__source">
+      <a href="https://github.com/UA-ResearchComputing-HPC/hpc-documentation" title="Go to repository" class="md-source" data-md-component="source">
+  <div class="md-source__icon md-icon">
+    
+    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512"><!--! Font Awesome Free 6.7.2 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License) Copyright 2024 Fonticons, Inc.--><path d="M439.55 236.05 244 40.45a28.87 28.87 0 0 0-40.81 0l-40.66 40.63 51.52 51.52c27.06-9.14 52.68 16.77 43.39 43.68l49.66 49.66c34.23-11.8 61.18 31 35.47 56.69-26.49 26.49-70.21-2.87-56-37.34L240.22 199v121.85c25.3 12.54 22.26 41.85 9.08 55a34.34 34.34 0 0 1-48.55 0c-17.57-17.6-11.07-46.91 11.25-56v-123c-20.8-8.51-24.6-30.74-18.64-45L142.57 101 8.45 235.14a28.86 28.86 0 0 0 0 40.81l195.61 195.6a28.86 28.86 0 0 0 40.8 0l194.69-194.69a28.86 28.86 0 0 0 0-40.81"/></svg>
+  </div>
+  <div class="md-source__repository">
+    GitHub
+  </div>
+</a>
+    </div>
+  
+  <ul class="md-nav__list" data-md-scrollfix>
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../.." class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Home
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    
+    
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_2" >
+        
+          
+          <label class="md-nav__link" for="__nav_2" id="__nav_2_label" tabindex="0">
+            
+  
+  <span class="md-ellipsis">
+    HPC Quick Start
+    
+  </span>
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_2_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_2">
+            <span class="md-nav__icon md-icon"></span>
+            HPC Quick Start
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../../quick_start/overview/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Overview
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../../quick_start/what_is_hpc/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    What is HPC?
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../../quick_start/common_misconceptions/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Common Misconceptions
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../../quick_start/logging_in/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Logging In
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../../quick_start/storage_and_transfers/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Storage and Transfers
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../../quick_start/accessing_compute/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Accessing Compute Nodes
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../../quick_start/software/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Software
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../../quick_start/summary/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Summary
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    
+    
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_3" >
+        
+          
+          <label class="md-nav__link" for="__nav_3" id="__nav_3_label" tabindex="0">
+            
+  
+  <span class="md-ellipsis">
+    Policies
+    
+  </span>
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_3_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_3">
+            <span class="md-nav__icon md-icon"></span>
+            Policies
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../../policies/acceptable_use/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Acceptable Use
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../../policies/access/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Access
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../../policies/acknowledgements/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Acknowledgements
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../../policies/buy_in/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Buy-in
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../../policies/committees/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Committees
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../../policies/loss_of_university_affiliation/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Loss of University Affiliation
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../../policies/maintenance/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Maintenance
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../../policies/special_projects/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Special Projects
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    
+    
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_4" >
+        
+          
+          <label class="md-nav__link" for="__nav_4" id="__nav_4_label" tabindex="0">
+            
+  
+  <span class="md-ellipsis">
+    Resources
+    
+  </span>
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_4_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_4">
+            <span class="md-nav__icon md-icon"></span>
+            Resources
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../../resources/allocations/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Allocations
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../../resources/compute_resources/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Compute Resources
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../../resources/data_center/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Research Data Center
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../../resources/secure_hpc/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Secure Services
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    
+    
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_5" >
+        
+          
+          <label class="md-nav__link" for="__nav_5" id="__nav_5_label" tabindex="0">
+            
+  
+  <span class="md-ellipsis">
+    Access
+    
+  </span>
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_5_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_5">
+            <span class="md-nav__icon md-icon"></span>
+            Access
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../../registration_and_access/account_creation/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Account Creation
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../../registration_and_access/account_deletion/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Account Deletion
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../../registration_and_access/group_management/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Group Management
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../../registration_and_access/system_access/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    System Access
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../../registration_and_access/system_overview/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    System Layout
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../../registration_and_access/vpn/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    VPN
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    
+    
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_6" >
+        
+          
+          <label class="md-nav__link" for="__nav_6" id="__nav_6_label" tabindex="0">
+            
+  
+  <span class="md-ellipsis">
+    Storage and Transfers
+    
+  </span>
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_6_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_6">
+            <span class="md-nav__icon md-icon"></span>
+            Storage and Transfers
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    
+    
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_6_1" >
+        
+          
+          <label class="md-nav__link" for="__nav_6_1" id="__nav_6_1_label" tabindex="0">
+            
+  
+  <span class="md-ellipsis">
+    Storage
+    
+  </span>
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_6_1_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_6_1">
+            <span class="md-nav__icon md-icon"></span>
+            Storage
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../../storage_and_transfers/storage/overview/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Overview
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../../storage_and_transfers/storage/hpc_storage/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    HPC Storage
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../../storage_and_transfers/storage/rental_storage/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Rental Storage
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../../storage_and_transfers/storage/rdas_storage/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    R-DAS Storage
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../../storage_and_transfers/storage/tier2_storage/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Tier2 AWS Storage
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    
+    
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_6_2" >
+        
+          
+          <label class="md-nav__link" for="__nav_6_2" id="__nav_6_2_label" tabindex="0">
+            
+  
+  <span class="md-ellipsis">
+    Transfers
+    
+  </span>
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_6_2_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_6_2">
+            <span class="md-nav__icon md-icon"></span>
+            Transfers
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../../storage_and_transfers/transfers/overview/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Overview
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../../storage_and_transfers/transfers/open_on_demand/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Open OnDemand
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../../storage_and_transfers/transfers/cyberduck/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Cyberduck
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../../storage_and_transfers/transfers/sftp_ftp_lftp/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    FTP/LFTP/SFTP
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../../storage_and_transfers/transfers/globus/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Globus
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../../storage_and_transfers/transfers/irods/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    iRODS
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../../storage_and_transfers/transfers/rsync/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Rsync
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../../storage_and_transfers/transfers/rclone/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Rclone
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../../storage_and_transfers/transfers/scp/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    SCP
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    
+    
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_7" >
+        
+          
+          <label class="md-nav__link" for="__nav_7" id="__nav_7_label" tabindex="0">
+            
+  
+  <span class="md-ellipsis">
+    Software
+    
+  </span>
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_7_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_7">
+            <span class="md-nav__icon md-icon"></span>
+            Software
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../../software/overview/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Overview
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../../software/modules/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Modules
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../../software/user_installations/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    User Installations
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../../software/common_datasets/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Common Datasets
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    
+    
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_7_5" >
+        
+          
+          <label class="md-nav__link" for="__nav_7_5" id="__nav_7_5_label" tabindex="0">
+            
+  
+  <span class="md-ellipsis">
+    Popular Software
+    
+  </span>
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_7_5_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_7_5">
+            <span class="md-nav__icon md-icon"></span>
+            Popular Software
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../../software/popular_software/anaconda/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Anaconda
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../../software/popular_software/gaussian/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Gaussian
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../../software/popular_software/alphafold/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    AlphaFold
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../../software/popular_software/mamba/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Mamba
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../../software/popular_software/matlab/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Matlab
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../../software/popular_software/perl/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Perl
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../../software/popular_software/python/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Python
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../../software/popular_software/R/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    R
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../../software/popular_software/vscode_remote_connection/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    VSCode Remote Connection
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    
+    
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_7_6" >
+        
+          
+          <label class="md-nav__link" for="__nav_7_6" id="__nav_7_6_label" tabindex="0">
+            
+  
+  <span class="md-ellipsis">
+    Containers
+    
+  </span>
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_7_6_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_7_6">
+            <span class="md-nav__icon md-icon"></span>
+            Containers
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../../software/containers/what_are_containers/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    What are Containers
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../../software/containers/containers_on_hpc/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Containers on HPC
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../../software/containers/pulling_containers/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Pulling Containers
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../../software/containers/building_containers/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Building Containers
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../../software/containers/using_containers/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Using Containers
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    
+    
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_8" >
+        
+          
+          <label class="md-nav__link" for="__nav_8" id="__nav_8_label" tabindex="0">
+            
+  
+  <span class="md-ellipsis">
+    Running Jobs
+    
+  </span>
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_8_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_8">
+            <span class="md-nav__icon md-icon"></span>
+            Running Jobs
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../../running_jobs/overview/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Overview
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../../running_jobs/job_limits/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Job Limits
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../../running_jobs/cpus_and_memory/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    CPUs and Memory
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../../running_jobs/open_on_demand/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Open OnDemand/Graphical Jobs
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../../running_jobs/interactive_jobs/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Interactive Jobs
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    
+    
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_8_6" >
+        
+          
+          <label class="md-nav__link" for="__nav_8_6" id="__nav_8_6_label" tabindex="0">
+            
+  
+  <span class="md-ellipsis">
+    Batch Jobs
+    
+  </span>
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_8_6_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_8_6">
+            <span class="md-nav__icon md-icon"></span>
+            Batch Jobs
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../../running_jobs/batch_jobs/intro/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Intro to Batch
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../../running_jobs/batch_jobs/batch_directives/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Batch Directives
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../../running_jobs/batch_jobs/environment_variables/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Environment Variables
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../../running_jobs/batch_jobs/array_jobs/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Array Jobs
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../../running_jobs/batch_jobs/gnu_parallel_jobs/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Jobs with GNU Parallel
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../../running_jobs/batch_jobs/job_dependencies/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Job Dependencies
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../../running_jobs/batch_jobs/submitting_jobs/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Submitting Jobs
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../../running_jobs/monitoring_jobs_and_resources/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Monitoring Jobs and Resources
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../../running_jobs/parallelization/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Parallelization
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    
+    
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_8_9" >
+        
+          
+          <label class="md-nav__link" for="__nav_8_9" id="__nav_8_9_label" tabindex="0">
+            
+  
+  <span class="md-ellipsis">
+    Visualization
+    
+  </span>
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_8_9_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_8_9">
+            <span class="md-nav__icon md-icon"></span>
+            Visualization
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../../running_jobs/visualization/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Intro
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    
+    
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_8_9_2" >
+        
+          
+          <label class="md-nav__link" for="__nav_8_9_2" id="__nav_8_9_2_label" tabindex="0">
+            
+  
+  <span class="md-ellipsis">
+    Blender
+    
+  </span>
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="3" aria-labelledby="__nav_8_9_2_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_8_9_2">
+            <span class="md-nav__icon md-icon"></span>
+            Blender
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../../running_jobs/visualization/blender/command_line_rendering/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Blender Command Line Rendering
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../../running_jobs/visualization/blender/scaling_up_blender_rendering/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Scaling Up Blender Rendering
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    
+    
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_8_9_3" >
+        
+          
+          <label class="md-nav__link" for="__nav_8_9_3" id="__nav_8_9_3_label" tabindex="0">
+            
+  
+  <span class="md-ellipsis">
+    ParaView
+    
+  </span>
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="3" aria-labelledby="__nav_8_9_3_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_8_9_3">
+            <span class="md-nav__icon md-icon"></span>
+            ParaView
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../../running_jobs/visualization/paraview/essential_ideas/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Essential Ideas
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../../running_jobs/visualization/paraview/getting_started_with_paraview_gui/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Getting Started with Paraview GUI
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../../running_jobs/visualization/paraview/cgal_vespa/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    CGAl Vespa
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../../running_jobs/visualization/paraview/paraview_python_plugins/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Paraview Python Plugins
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../../running_jobs/visualization/paraview/getting_started_with_paraview_terminal/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Getting Started with Paraview Terminal
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../../running_jobs/visualization/paraview/graphs_and_exporting_data/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Graphs and Exporting Data
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../../running_jobs/visualization/paraview/cameras_and_keyframes/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Cameras and Keyframes
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../../running_jobs/visualization/paraview/headless_batch_rendering/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Headless Batch Rendering
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../../running_jobs/visualization/paraview/speeding_up_filters_and_rendering_with_client_server_configurations/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Speeding up Filters & Rendering with Client Server configurations
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../../running_jobs/visualization/paraview/visualizing_netcdf_files/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Visualizing NetCDF Files
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    
+    
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_8_9_4" >
+        
+          
+          <label class="md-nav__link" for="__nav_8_9_4" id="__nav_8_9_4_label" tabindex="0">
+            
+  
+  <span class="md-ellipsis">
+    Reconstruction
+    
+  </span>
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="3" aria-labelledby="__nav_8_9_4_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_8_9_4">
+            <span class="md-nav__icon md-icon"></span>
+            Reconstruction
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../../running_jobs/visualization/reconstruction/gaussian_splatting/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Gaussian Splatting
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../../running_jobs/visualization/arcgis_pro_heightmaps/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    ArcGIS Pro Heightmaps
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../../running_jobs/visualization/visit/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    VisIt
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    
+    
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_9" >
+        
+          
+          <label class="md-nav__link" for="__nav_9" id="__nav_9_label" tabindex="0">
+            
+  
+  <span class="md-ellipsis">
+    Support
+    
+  </span>
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_9_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_9">
+            <span class="md-nav__icon md-icon"></span>
+            Support
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../../support_and_training/consulting_services/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Consulting Services
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../../support_and_training/people/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Support Staff
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../../support_and_training/faqs/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    FAQs
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../../support_and_training/glossary/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Glossary
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../../support_and_training/cheat_sheet/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Linux Cheat Sheet
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../../support_and_training/grants/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Grants
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../../support_and_training/external_resources/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Community and External Resources
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../../support_and_training/website_accessibility/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Website Accessibility
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    
+    
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_10" >
+        
+          
+          <label class="md-nav__link" for="__nav_10" id="__nav_10_label" tabindex="0">
+            
+  
+  <span class="md-ellipsis">
+    Events and Workshops
+    
+  </span>
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_10_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_10">
+            <span class="md-nav__icon md-icon"></span>
+            Events and Workshops
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../calendar/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Calendar
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    HPC Workshop Materials
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    
+    
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_11" >
+        
+          
+          <label class="md-nav__link" for="__nav_11" id="__nav_11_label" tabindex="0">
+            
+  
+  <span class="md-ellipsis">
+    Blog
+    
+  </span>
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_11_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_11">
+            <span class="md-nav__icon md-icon"></span>
+            Blog
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+    
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../../blog/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Blog
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    
+    
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_11_2" >
+        
+          
+          <label class="md-nav__link" for="__nav_11_2" id="__nav_11_2_label" tabindex="0">
+            
+  
+  <span class="md-ellipsis">
+    Archive
+    
+  </span>
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_11_2_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_11_2">
+            <span class="md-nav__icon md-icon"></span>
+            Archive
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+    
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../../blog/archive/2025/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    2025
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+    
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../../blog/archive/2024/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    2024
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    
+    
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_11_3" >
+        
+          
+          <label class="md-nav__link" for="__nav_11_3" id="__nav_11_3_label" tabindex="0">
+            
+  
+  <span class="md-ellipsis">
+    Categories
+    
+  </span>
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_11_3_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_11_3">
+            <span class="md-nav__icon md-icon"></span>
+            Categories
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+    
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../../blog/category/ai/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    AI
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+    
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../../blog/category/conferences/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Conferences
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+    
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../../blog/category/research/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Research
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+    
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../../blog/category/storage/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Storage
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../../results/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Results
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+    
+  </ul>
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+            
+          
+          
+            <div class="md-content" data-md-component="content">
+              <article class="md-content__inner md-typeset">
+                
+                  
+
+
+  
+  
+
+
+<p><link rel="stylesheet" href="../../../../assets/stylesheets/embedded_files.css">
+<link rel="stylesheet" href="../../../../assets/stylesheets/buttons.css"></p>
+<h1 id="intro-to-machine-learning-with-r-on-hpc">Intro to Machine Learning with R on HPC<a class="headerlink" href="#intro-to-machine-learning-with-r-on-hpc" title="Permanent link">&para;</a></h1>
+<p>We will discuss a few hands-on examples of machine learning with R. You can run these in a RStudio notebook, or using a batch script (see <a href="../../intro_to_hpc/">Intro to HPC</a>). Here we emphasize on using RStudio notebooks. We recommend that you try these hands-on examples.</p>
+<h2 id="why-use-r-for-machine-learning">Why use R for machine learning?<a class="headerlink" href="#why-use-r-for-machine-learning" title="Permanent link">&para;</a></h2>
+<ul>
+<li>R has been the quintessential language for Statistics for a while</li>
+<li>Comes batteries included -- tons of datasets and data visualization tools</li>
+<li>RStudio &amp; Shiny provide an excellent platform to develop and share your code</li>
+<li>Most HPC consultants are familiar with R</li>
+</ul>
+<h2 id="things-to-look-out-for">Things to look out for<a class="headerlink" href="#things-to-look-out-for" title="Permanent link">&para;</a></h2>
+<p>The popularity of R also means that there are a lot of moving pieces. Sometimes, that can complicate your workflow. For machine learning with R on HPC, keep the following in mind:</p>
+<div class="annotate">
+<ul>
+<li>Don't mix R versions</li>
+<li>Bazillion packages to do the same thing, but not all equally efficient (1)</li>
+<li>Installing packages on HPC clusters can sometimes be non-trivial (2)</li>
+<li>Using GPUs might need some extra configuration</li>
+<li>Not all R package managers play well with HPC environments</li>
+</ul>
+</div>
+<ol>
+<li>Use packages from the <a href="https://www.tidyverse.org/"><code>tidyverse</code></a> universe if possible. However to keep things simple we will not use <code>tidyverse</code> packages in this workshop, but we highly recommend that you look them up if you are using R for data-based research.</li>
+<li>Read the <a href="../../../../software/popular_software/R/">section</a> on R in our docs.</li>
+</ol>
+<h2 id="setting-up-r-for-machine-learning-on-hpc">Setting up R for machine learning on HPC<a class="headerlink" href="#setting-up-r-for-machine-learning-on-hpc" title="Permanent link">&para;</a></h2>
+<ul>
+<li>R and RStudio are already installed on HPC</li>
+<li>Read the <a href="../../../../software/popular_software/R/">section</a> on R in our docs to troubleshoot package installation issues</li>
+</ul>
+<h2 id="access-rstudio-from-ood">Access RStudio from OOD<a class="headerlink" href="#access-rstudio-from-ood" title="Permanent link">&para;</a></h2>
+<div class="annotate">
+<ol>
+<li>Navigate to <a href="https://ood.hpc.arizona.edu/">https://ood.hpc.arizona.edu/</a>. After login, you will see the OOD dashboard.
+<img src="images/ood_dashboard.png" alt="OOD Dashboard" height="400"/></li>
+<li>Select <strong>Interactive Apps</strong>, and then from the drop-down menu select <strong>RStudio Server</strong>.
+<img src="images/ood_dropdown.png" alt="OOD Dashboard" height="400"/></li>
+<li>Fill in the details in the form that opens up (1), and select <strong>Launch</strong>.
+<img src="images/ood_rstudio_form.png" alt="OOD Dashboard" height="400"/></li>
+<li>After the session becomes available, select <strong>Connect to RStudio Server</strong> (2).
+<img src="images/ood_rstudio_running.png" alt="Running" width="800"/></li>
+</ol>
+</div>
+<ol>
+<li>Use your PI's group's name for the <em>PI Group</em> field. You can find out your PI's group's name by running <code>va</code> in a terminal session.</li>
+<li>
+<ol>
+<li>After you select <strong>Launch</strong> in the previous step, OOD will take you to a page with a tile that shows your pending job. When it's first submitted, its status will show as <strong>Queued</strong>. Once it starts, it's status will change to <strong>Running</strong> and you'll see the <strong>Connect to RStudio Server</strong> link.</li>
+</ol>
+</li>
+</ol>
+<h2 id="examples">Examples<a class="headerlink" href="#examples" title="Permanent link">&para;</a></h2>
+<h3 id="incomplete-datasets">Incomplete datasets<a class="headerlink" href="#incomplete-datasets" title="Permanent link">&para;</a></h3>
+<p><center><a class="md-button" href="files/data-prelim.R">Click here to download R script</a></center></p>
+<p>Realistic datasets, like R's <code>airquality</code> dataset, often come with missing values. Not all machine learning models/algorithms are capable of dealing with datasets with missing values. Semi-supervised learning is a machine learning method that can deal with certain missing data. A more universal approach is to clean the dataset. Among other things this can involve:</p>
+<ul>
+<li>Removing observations with missing entries</li>
+<li>Filling the missing entries with token values</li>
+</ul>
+<p>Which method you choose will depend on the problem you are trying to solve. In this example we will look at some of the tools that R's provides to help you clean the data.</p>
+<p class="annotate">The <code>airquality</code> dataset is part of the standard GNU R distribution. You can access it with the constant <code>airquality</code>. Instead of loading the whole dataset, we will just view the top 5 rows with the <code>head</code> function. (1)</p>
+<ol>
+<li>The <code>head</code> function is useful to quickly glimpse the first <span class="arithmatex">\(N\)</span> rows of the dataset, without loading the whole dataset.</li>
+</ol>
+<div class="highlight"><pre><span></span><code><span class="nf">head</span><span class="p">(</span><span class="n">airquality</span><span class="p">,</span><span class="w"> </span><span class="m">5</span><span class="p">)</span>
+</code></pre></div>
+<div class="highlight"><pre><span></span><code>  Ozone Solar.R Wind Temp Month Day
+1    41     190  7.4   67     5   1
+2    36     118  8.0   72     5   2
+3    12     149 12.6   74     5   3
+4    18     313 11.5   62     5   4
+5    NA      NA 14.3   56     5   5
+</code></pre></div>
+<p class="annotate">The dataset has 6 columns. On the fifth row there are two <code>NA</code> entries. R uses <code>NA</code> (<em>N</em>ot <em>A</em>vailable) to indicate missing values. Thus the <code>airquality</code> dataset is missing values. While in this case we easily found out that this dataset is incomplete, <code>head</code> in general is not a good way to detect if there are missing values. (1)</p>
+<ol>
+<li>Can you think why <code>head</code> is not a good missing value detector?</li>
+</ol>
+<p>R comes with other tools to detect missing values. One of the is <code>is.na</code>, which tells you if a quantity is <code>NA</code> or not. It returns <code>TRUE</code> if a quantity is <code>NA</code> else false.</p>
+<p><div class="highlight"><pre><span></span><code><span class="nf">is.na</span><span class="p">(</span><span class="nf">c</span><span class="p">(</span><span class="s">&quot;a&quot;</span><span class="p">,</span><span class="w"> </span><span class="m">5</span><span class="p">,</span><span class="w"> </span><span class="kc">NA</span><span class="p">))</span>
+</code></pre></div>
+<div class="highlight"><pre><span></span><code>[1] FALSE FALSE  TRUE
+</code></pre></div></p>
+<p class="annotate">You can combine <code>is.na</code> with the functions <code>which</code> and <code>sum</code> to see if, where, and how many <code>NA</code> quantities are there. (1)</p>
+<ol>
+<li>Find out what other tools R provides to detect missing values.</li>
+</ol>
+<p class="annotate"><div class="highlight"><pre><span></span><code><span class="nf">which</span><span class="p">(</span><span class="nf">is.na</span><span class="p">(</span><span class="n">airquality</span><span class="p">))</span><span class="w"> </span><span class="c1"># (1)!</span>
+</code></pre></div></p>
+<ol>
+<li>Check what happens when you add the <code>arr.ind=TRUE</code> argument.</li>
+</ol>
+<div class="highlight"><pre><span></span><code> [1]   5  10  25  26  27  32  33  34  35  36  37  39  42  43  45  46  52  53  54  55
+[21]  56  57  58  59  60  61  65  72  75  83  84 102 103 107 115 119 150 158 159 164
+[41] 180 249 250 251
+</code></pre></div>
+<p>There are 44 missing values, and the numbers not in brackets indicate the rows where the missing values are (we have already seen that there are two missing values in row 5). If you do not care where the missing values are you can run <code>sum(is.na(airquality))</code> which will tell you the number of missing values. This can be useful to determine if you should drop the observations (rows) with the missing values. If dropping incomplete observations do not substantially decrease the size of your dataset then dropping them is a good option. Otherwise you might want to consider alternative solutions. </p>
+<div class="highlight"><pre><span></span><code><span class="nf">sum</span><span class="p">(</span><span class="nf">is.na</span><span class="p">(</span><span class="n">airquality</span><span class="p">))</span><span class="w"> </span><span class="o">/</span><span class="w"> </span><span class="nf">nrow</span><span class="p">(</span><span class="n">airquality</span><span class="p">)</span>
+</code></pre></div>
+<div class="highlight"><pre><span></span><code>[1] 0.2875817
+</code></pre></div>
+<p class="annotate">Dropping the incomplete observations will reduce the <code>airquality</code> dataset by little less than 30%. This is actually an upper bound on the amount of data loss, because some rows have multiple missing entries. Whether a 30% decrease is significant or not will depend on the problem you are trying to solve and the data you have. Here we will see how we can drop incomplete observations. (1)</p>
+<ol>
+<li>Find out how to fill in the missing entries instead of dropping the incomplete observations.</li>
+</ol>
+<div class="highlight"><pre><span></span><code><span class="n">airquality_no_na</span><span class="w"> </span><span class="o">&lt;-</span><span class="w"> </span><span class="nf">na.omit</span><span class="p">(</span><span class="n">airquality</span><span class="p">)</span>
+<span class="nf">sum</span><span class="p">(</span><span class="nf">is.na</span><span class="p">(</span><span class="n">airquality_no_na</span><span class="p">))</span>
+</code></pre></div>
+<div class="highlight"><pre><span></span><code>[1] 0
+</code></pre></div>
+<p>Sometimes it is actually better to first visualize the dataset, including the distribution of the missing data. We will not go into that in this workshop. But we recommend that you check out packages like <code>visdat</code> and <code>VIM</code> which provide advanced functionality to visualize missing data.</p>
+<h3 id="clustering">Clustering 🐧<a class="headerlink" href="#clustering" title="Permanent link">&para;</a></h3>
+<p><center><a class="md-button" href="files/penguins_kmeans.R">Click here to download R script</a></center></p>
+<p>In this example we will cluster penguins into groups based on their bill features. We will use the <a href="https://allisonhorst.github.io/palmerpenguins/articles/intro.html">Palmer penguins</a> dataset.</p>
+<p><img src="images/palmerpenguins.png" width="600"></p>
+<p><cite>Artwork by <a href="https://twitter.com/allison_horst">@allison_horst</a></cite></p>
+<h4 id="accessing-the-data">Accessing the data<a class="headerlink" href="#accessing-the-data" title="Permanent link">&para;</a></h4>
+<p>The R package <code>palmerpenguins</code> provides the data, along with some other goodies. You can just download the data file from the sources mentioned in the link above. But it's much easier to use the packaged version. Note that while the package is called <code>palmerpenguins</code> the dataset itself is named <code>penguins</code>. </p>
+<div class="highlight"><pre><span></span><code><span class="nf">install.packages</span><span class="p">(</span><span class="s">&quot;palmerpenguins&quot;</span><span class="p">)</span>
+<span class="nf">library</span><span class="p">(</span><span class="n">palmerpenguins</span><span class="p">)</span>
+</code></pre></div>
+<h4 id="visualizing-the-data">Visualizing the data<a class="headerlink" href="#visualizing-the-data" title="Permanent link">&para;</a></h4>
+<div class="highlight"><pre><span></span><code><span class="nf">summary</span><span class="p">(</span><span class="n">penguins</span><span class="p">)</span>
+</code></pre></div>
+<div class="highlight"><pre><span></span><code>      species          island    bill_length_mm  bill_depth_mm  
+ Adelie   :152   Biscoe   :168   Min.   :32.10   Min.   :13.10  
+ Chinstrap: 68   Dream    :124   1st Qu.:39.23   1st Qu.:15.60  
+ Gentoo   :124   Torgersen: 52   Median :44.45   Median :17.30  
+                                 Mean   :43.92   Mean   :17.15  
+                                 3rd Qu.:48.50   3rd Qu.:18.70  
+                                 Max.   :59.60   Max.   :21.50  
+                                 NA&#39;s   :2       NA&#39;s   :2      
+ flipper_length_mm  body_mass_g       sex           year     
+ Min.   :172.0     Min.   :2700   female:165   Min.   :2007  
+ 1st Qu.:190.0     1st Qu.:3550   male  :168   1st Qu.:2007  
+ Median :197.0     Median :4050   NA&#39;s  : 11   Median :2008  
+ Mean   :200.9     Mean   :4202                Mean   :2008  
+ 3rd Qu.:213.0     3rd Qu.:4750                3rd Qu.:2009  
+ Max.   :231.0     Max.   :6300                Max.   :2009  
+ NA&#39;s   :2         NA&#39;s   :2                   
+</code></pre></div>
+<p class="annotate">The <code>summary</code> function is very handy to get an overall sense of a dataset. Often starting the exploration of your dataset with <code>summary</code> and <code>head</code> along with some visualizations is a good idea. (1)</p>
+<ol>
+<li>Look at the last row of each column in the output of <code>summary</code>. Do you see something useful?</li>
+</ol>
+<p>There are three unique species of penguins in the dataset. It might be tempting to think that there are three clusters in the dataset - one for each species. However, that need not be the case. Even if there are three clusters, they might not necessarily overlap with any species. Whether the clusters correspond to species will depend on the variance in intra-species differences and the variance in inter-species differences.</p>
+<p>In addition to "species" there are three other categorical variables - "island", "sex", and "year". The remaining four are continuous variables. Plotting the categorical variables against each other will not give much useful information. We will plot the continuous variables.</p>
+<div class="highlight"><pre><span></span><code><span class="n">cat</span><span class="w"> </span><span class="o">&lt;-</span><span class="w"> </span><span class="nf">c</span><span class="p">(</span><span class="s">&quot;species&quot;</span><span class="p">,</span><span class="w"> </span><span class="s">&quot;island&quot;</span><span class="p">,</span><span class="w"> </span><span class="s">&quot;sex&quot;</span><span class="p">,</span><span class="w"> </span><span class="s">&quot;year&quot;</span><span class="p">)</span>
+<span class="nf">plot</span><span class="p">(</span><span class="n">penguins</span><span class="p">[,</span><span class="w"> </span><span class="o">!</span><span class="p">(</span><span class="nf">names</span><span class="p">(</span><span class="n">penguins</span><span class="p">)</span><span class="w"> </span><span class="o">%in%</span><span class="w"> </span><span class="n">cat</span><span class="p">)])</span>
+</code></pre></div>
+<p><img src="images/penguins_pairplot.png" alt="Penguins pair plot", width="800"/></p>
+<p>The figure above shows that only when we plot <code>bill_length_mm</code> vs <code>bill_depth_mm</code>, or <code>bill_length_mm</code> vs <code>flipper_length_mm</code> we see more than two clusters. This does not mean that there are not more that two clusters. It just means that in <em>two-dimensions</em> these are the only two cases where we see hints of more two clusters.</p>
+<h4 id="k-means-clustering">K-means clustering<a class="headerlink" href="#k-means-clustering" title="Permanent link">&para;</a></h4>
+<p><mark class="critic">Clustering is an unsupervised machine learning process</mark>, we do not provide any labels when we train the model. This is unlike the next examples, where we provided the labels. What this means is that a clustering model will not be able to tell if a particular cluster corresponds to a penguin species (or any other suitable label depending on the problem), but it will show the clusters that are there in the dataset. </p>
+<p>In K-means clustering the dataset is partitioned into K clusters, and each observation belongs to the cluster with the nearest mean (also known as centroid). The <code>stats</code> module of R comes with an implementation of K-means. See <a href="https://academic.oup.com/jrsssc/article-abstract/28/1/100/6953842?login=false">A K-means clustering algorithm</a> for more information on the algorithm used in R's implementation of K-means clustering. K-means while one of the most popular clustering methods comes with the caveat that we have to choose K. The algorithm will then find those K clusters. There is no standard way to decide on a value of K. To keep things simple, here we will look at the <code>bill_length_mm</code> vs <code>bill_depth_mm</code> subset of the <code>penguins</code> dataset, which has at least two clusters.</p>
+<p class="annotate"><div class="highlight"><pre><span></span><code><span class="n">df</span><span class="w"> </span><span class="o">&lt;-</span><span class="w"> </span><span class="nf">data.frame</span><span class="p">(</span><span class="n">penguins</span><span class="o">$</span><span class="n">bill_length_mm</span><span class="p">,</span><span class="w"> </span><span class="n">penguins</span><span class="o">$</span><span class="n">bill_depth_mm</span><span class="p">)</span><span class="w"> </span><span class="c1"># (1)!</span>
+<span class="n">df</span><span class="w"> </span><span class="o">&lt;-</span><span class="w"> </span><span class="nf">na.omit</span><span class="p">(</span><span class="n">df</span><span class="p">)</span>
+<span class="n">cl</span><span class="w"> </span><span class="o">&lt;-</span><span class="w"> </span><span class="nf">kmeans</span><span class="p">(</span><span class="n">df</span><span class="p">,</span><span class="w"> </span><span class="m">3</span><span class="p">,</span><span class="w"> </span><span class="n">nstart</span><span class="o">=</span><span class="m">10</span><span class="p">)</span><span class="w"> </span><span class="c1"># (2)!</span>
+<span class="nf">plot</span><span class="p">(</span><span class="n">df</span><span class="p">,</span><span class="w"> </span><span class="n">col</span><span class="o">=</span><span class="n">cl</span><span class="o">$</span><span class="n">cluster</span><span class="p">)</span>
+<span class="nf">points</span><span class="p">(</span><span class="n">cl</span><span class="o">$</span><span class="n">centers</span><span class="p">,</span><span class="w"> </span><span class="n">col</span><span class="o">=</span><span class="m">1</span><span class="o">:</span><span class="m">3</span><span class="p">,</span><span class="w"> </span><span class="n">pch</span><span class="o">=</span><span class="m">19</span><span class="p">,</span><span class="w"> </span><span class="n">lwd</span><span class="o">=</span><span class="m">10</span><span class="p">)</span>
+</code></pre></div></p>
+<ol>
+<li>An alternative way to choose columns.</li>
+<li>Why is <code>nstart</code> necessary? Try this with 2 clusters.</li>
+</ol>
+<p><img src="images/penguins_k_means_centroids.png" alt="Centroids of K-means clusters", width="800"/></p>
+<h3 id="classification">🍄 classification<a class="headerlink" href="#classification" title="Permanent link">&para;</a></h3>
+<p><center><a class="md-button" href="files/mushroom_naivebayes.R">Click here to download R script</a></center></p>
+<p>In this example we are going to classify mushrooms as either edible or poisonous based on their physical features.</p>
+<h4 id="accessing-the-dataset">Accessing the dataset<a class="headerlink" href="#accessing-the-dataset" title="Permanent link">&para;</a></h4>
+<p>The original dataset is hosted on UC Irvine's <a href="https://archive.ics.uci.edu/dataset/73/mushroom">Machine Learning Repository</a>. A version of it is also available at Brett Lantz's <a href="https://github.com/stedy/machine-learning-with-R-datasets">Machine Learning with R datasets</a> Github repository. We will download Brett's version for this example.</p>
+<div class="highlight"><pre><span></span><code><span class="nf">download.file</span><span class="p">(</span>
+<span class="w">  </span><span class="s">&quot;https://raw.githubusercontent.com/stedy/Machine-Learning-with-R-datasets/master/mushrooms.csv&quot;</span><span class="p">,</span>
+<span class="w">  </span><span class="n">destfile</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="s">&quot;Mushroom.csv&quot;</span>
+<span class="p">)</span>
+<span class="n">mushroom</span><span class="w"> </span><span class="o">&lt;-</span><span class="w"> </span><span class="nf">read.csv</span><span class="p">(</span><span class="s">&quot;Mushroom.csv&quot;</span><span class="p">,</span><span class="w"> </span><span class="n">na.strings</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="s">&quot;?&quot;</span><span class="p">)</span>
+</code></pre></div>
+<h4 id="visualizing-the-dataset">Visualizing the dataset<a class="headerlink" href="#visualizing-the-dataset" title="Permanent link">&para;</a></h4>
+<p>This is a much larger dataset than the <code>penguins</code> or the <code>airquality</code> datasets. Without some prettier printing the outputs of <code>summary</code> or <code>head</code> might be difficult to parse visually. We will look at some other R functions to help with getting a sense of the dataset.</p>
+<p><div class="highlight"><pre><span></span><code><span class="nf">c</span><span class="p">(</span><span class="nf">nrow</span><span class="p">(</span><span class="n">mushroom</span><span class="p">),</span><span class="w"> </span><span class="nf">ncol</span><span class="p">(</span><span class="n">mushroom</span><span class="p">),</span><span class="w"> </span><span class="nf">sum</span><span class="p">(</span><span class="nf">is.na</span><span class="p">(</span><span class="n">mushroom</span><span class="p">)))</span>
+</code></pre></div>
+<div class="highlight"><pre><span></span><code>[1] 8124   23 2480
+</code></pre></div></p>
+<p>This dataset has 8124 observations and each observation has 23 features. There are 2480 missing entries. We also want to know what are these features and what type of data do they store. The more you know about the dataset the better. Often you will have to preprocess the data prior to train a machine learning model with it. Thus it useful to explore the dataset.</p>
+<p class="annotate"><div class="highlight"><pre><span></span><code><span class="nf">colnames</span><span class="p">(</span><span class="n">mushroom</span><span class="p">)</span>
+</code></pre></div>
+<div class="highlight"><pre><span></span><code> [1] &quot;type&quot;                     &quot;cap_shape&quot;               
+ [3] &quot;cap_surface&quot;              &quot;cap_color&quot;               
+ [5] &quot;bruises&quot;                  &quot;odor&quot;                    
+ [7] &quot;gill_attachment&quot;          &quot;gill_spacing&quot;            
+ [9] &quot;gill_size&quot;                &quot;gill_color&quot;              
+[11] &quot;stalk_shape&quot;              &quot;stalk_root&quot;              
+[13] &quot;stalk_surface_above_ring&quot; &quot;stalk_surface_below_ring&quot;
+[15] &quot;stalk_color_above_ring&quot;   &quot;stalk_color_below_ring&quot;  
+[17] &quot;veil_type&quot;                &quot;veil_color&quot;              
+[19] &quot;ring_number&quot;              &quot;ring_type&quot;               
+[21] &quot;spore_print_color&quot;        &quot;population&quot;              
+[23] &quot;habitat&quot;             
+</code></pre></div>
+<div class="highlight"><pre><span></span><code><span class="nf">t</span><span class="p">(</span><span class="nf">sapply</span><span class="p">(</span><span class="n">mushroom</span><span class="p">,</span><span class="w"> </span><span class="n">summary</span><span class="p">))</span><span class="w"> </span><span class="c1"># (1)!</span>
+</code></pre></div></p>
+<ol>
+<li><code>sapply</code> applies a function over all the elements of a <code>List</code> or <code>Vector</code>, and <code>t</code> returns the transpose of a <code>Matrix</code>.</li>
+</ol>
+<div class="highlight"><pre><span></span><code>                         Length Class       Mode       
+type                     &quot;8124&quot; &quot;character&quot; &quot;character&quot;
+cap_shape                &quot;8124&quot; &quot;character&quot; &quot;character&quot;
+cap_surface              &quot;8124&quot; &quot;character&quot; &quot;character&quot;
+cap_color                &quot;8124&quot; &quot;character&quot; &quot;character&quot;
+bruises                  &quot;8124&quot; &quot;character&quot; &quot;character&quot;
+odor                     &quot;8124&quot; &quot;character&quot; &quot;character&quot;
+gill_attachment          &quot;8124&quot; &quot;character&quot; &quot;character&quot;
+gill_spacing             &quot;8124&quot; &quot;character&quot; &quot;character&quot;
+gill_size                &quot;8124&quot; &quot;character&quot; &quot;character&quot;
+gill_color               &quot;8124&quot; &quot;character&quot; &quot;character&quot;
+stalk_shape              &quot;8124&quot; &quot;character&quot; &quot;character&quot;
+stalk_root               &quot;8124&quot; &quot;character&quot; &quot;character&quot;
+stalk_surface_above_ring &quot;8124&quot; &quot;character&quot; &quot;character&quot;
+stalk_surface_below_ring &quot;8124&quot; &quot;character&quot; &quot;character&quot;
+stalk_color_above_ring   &quot;8124&quot; &quot;character&quot; &quot;character&quot;
+stalk_color_below_ring   &quot;8124&quot; &quot;character&quot; &quot;character&quot;
+veil_type                &quot;8124&quot; &quot;character&quot; &quot;character&quot;
+veil_color               &quot;8124&quot; &quot;character&quot; &quot;character&quot;
+ring_number              &quot;8124&quot; &quot;character&quot; &quot;character&quot;
+ring_type                &quot;8124&quot; &quot;character&quot; &quot;character&quot;
+spore_print_color        &quot;8124&quot; &quot;character&quot; &quot;character&quot;
+population               &quot;8124&quot; &quot;character&quot; &quot;character&quot;
+habitat                  &quot;8124&quot; &quot;character&quot; &quot;character&quot;
+</code></pre></div>
+<p>Interestingly, all the columns are categorical, and all the entries are character strings. Not all machine learning algorithms can work with character strings. You can use something like the <code>factor</code> function to convert those to numerical values. We will not have to do that in this example, but it is useful for you to know. The <code>type</code> column is our column of interest. We will take a more closer look at that.</p>
+<p><div class="highlight"><pre><span></span><code><span class="nf">unique</span><span class="p">(</span><span class="n">mushroom</span><span class="o">$</span><span class="n">type</span><span class="p">)</span>
+</code></pre></div>
+<div class="highlight"><pre><span></span><code>[1] &quot;p&quot; &quot;e&quot;
+</code></pre></div>
+<div class="highlight"><pre><span></span><code><span class="nf">barplot</span><span class="p">(</span><span class="nf">table</span><span class="p">(</span><span class="n">mushroom</span><span class="o">$</span><span class="n">type</span><span class="p">))</span>
+</code></pre></div>
+<img src="images/mushroom_barplot.png" alt="Mushroom type bar plot", width="600"/></p>
+<p class="annotate">There are only two types of mushrooms, <code>p</code> for poisonous, and <code>e</code> for edible. As the dataset is fairly balanced, we have comparable numbers of poisonous and edible mushrooms. (1) We will train a machine learning model to recognize a mushroom as either poisonous or edible based on its other features. Thus the type of the mushroom will be the label, and the rest of the columns the inputs for the model.</p>
+<ol>
+<li>Besides making a graph, how can you find out if a dataset is balanced?</li>
+</ol>
+<h4 id="naive-bayes-classifier">Naive Bayes classifier<a class="headerlink" href="#naive-bayes-classifier" title="Permanent link">&para;</a></h4>
+<p>Naive Bayes classifiers are a class of probabilistic models that try to model the distribution of inputs of a given category. They apply Bayes' theorem with the assumption of conditional independence between every pair of inputs given the value of the category variable. Despite being a class of very simple models, they are impressively good at text classification. For more information on naive Bayes classifiers, see <a href="https://www.jstor.org/stable/1403452?origin=crossref">Idiot's Bayes: Not So Stupid after All?</a>.</p>
+<p>To train a naive Bayes classifier, we will first randomly split the <code>mushroom</code> dataset into a train set containing 70% of the data, and a test set containing the remaining 30%. The <code>train_test_split</code> function implemented below is handy for this.</p>
+<div class="highlight"><pre><span></span><code><span class="n">train_test_split</span><span class="w"> </span><span class="o">&lt;-</span><span class="w"> </span><span class="nf">function</span><span class="p">(</span><span class="n">data</span><span class="p">,</span><span class="w"> </span><span class="n">ratio</span><span class="p">)</span><span class="w"> </span><span class="p">{</span>
+<span class="w">  </span><span class="n">idx</span><span class="w"> </span><span class="o">&lt;-</span><span class="w"> </span><span class="nf">sample</span><span class="p">(</span><span class="nf">c</span><span class="p">(</span><span class="kc">TRUE</span><span class="p">,</span><span class="w"> </span><span class="kc">FALSE</span><span class="p">),</span><span class="w"> </span><span class="nf">nrow</span><span class="p">(</span><span class="n">data</span><span class="p">),</span><span class="w"> </span><span class="n">replace</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="kc">TRUE</span><span class="p">,</span><span class="w"> </span><span class="n">prob</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="nf">c</span><span class="p">(</span><span class="n">ratio</span><span class="p">,</span><span class="w"> </span><span class="m">1</span><span class="w"> </span><span class="o">-</span><span class="w"> </span><span class="n">ratio</span><span class="p">))</span>
+<span class="w">  </span><span class="n">train</span><span class="w"> </span><span class="o">&lt;-</span><span class="w"> </span><span class="n">data</span><span class="p">[</span><span class="n">idx</span><span class="p">,</span><span class="w"> </span><span class="p">]</span>
+<span class="w">  </span><span class="n">test</span><span class="w"> </span><span class="o">&lt;-</span><span class="w"> </span><span class="n">data</span><span class="p">[</span><span class="o">!</span><span class="n">idx</span><span class="p">,</span><span class="w"> </span><span class="p">]</span>
+<span class="w">  </span><span class="nf">return</span><span class="p">(</span><span class="nf">list</span><span class="p">(</span><span class="s">&quot;train&quot;</span><span class="o">=</span><span class="n">train</span><span class="p">,</span><span class="w"> </span><span class="s">&quot;test&quot;</span><span class="o">=</span><span class="n">test</span><span class="p">))</span>
+<span class="p">}</span>
+</code></pre></div>
+<div class="highlight"><pre><span></span><code><span class="n">split</span><span class="w"> </span><span class="o">&lt;-</span><span class="w"> </span><span class="nf">train_test_split</span><span class="p">(</span><span class="n">mushroom</span><span class="p">,</span><span class="w"> </span><span class="m">0.7</span><span class="p">)</span>
+<span class="nf">c</span><span class="p">(</span><span class="nf">nrow</span><span class="p">(</span><span class="n">split</span><span class="o">$</span><span class="n">train</span><span class="p">),</span><span class="w"> </span><span class="nf">nrow</span><span class="p">(</span><span class="n">split</span><span class="o">$</span><span class="n">test</span><span class="p">))</span>
+</code></pre></div>
+<div class="highlight"><pre><span></span><code>[1] 5629 2495
+</code></pre></div>
+<p>The <code>naivebayes</code> package provides a simple and efficient implementation of various naive Bayes classifiers.</p>
+<div class="highlight"><pre><span></span><code><span class="nf">install.packages</span><span class="p">(</span><span class="s">&quot;naivebayes&quot;</span><span class="p">)</span><span class="w"> </span><span class="c1"># (1)!</span>
+<span class="nf">library</span><span class="p">(</span><span class="n">naivebayes</span><span class="p">)</span>
+</code></pre></div>
+<ol>
+<li>After installing the package, run <code>vignette("intro_naivebayes")</code> to read a very nice introduction to this package, and to naive Bayes classifiers. You can also find the vignette on <a href="https://cran.r-project.org/web/packages/naivebayes/vignettes/intro_naivebayes.pdf">CRAN</a>.</li>
+</ol>
+<p class="annotate"><div class="highlight"><pre><span></span><code><span class="n">nb</span><span class="w"> </span><span class="o">&lt;-</span><span class="w"> </span><span class="nf">naive_bayes</span><span class="p">(</span><span class="n">type</span><span class="w"> </span><span class="o">~</span><span class="w"> </span><span class="n">.</span><span class="p">,</span><span class="w"> </span><span class="n">split</span><span class="o">$</span><span class="n">train</span><span class="p">)</span><span class="w"> </span><span class="c1"># (1)!</span>
+<span class="n">pred</span><span class="w"> </span><span class="o">&lt;-</span><span class="w"> </span><span class="nf">predict</span><span class="p">(</span><span class="n">nb</span><span class="p">,</span><span class="w"> </span><span class="n">split</span><span class="o">$</span><span class="n">test</span><span class="p">)</span><span class="w"> </span><span class="c1"># (2)!</span>
+<span class="n">tab</span><span class="w"> </span><span class="o">&lt;-</span><span class="w"> </span><span class="nf">table</span><span class="p">(</span><span class="n">pred</span><span class="p">,</span><span class="w"> </span><span class="n">split</span><span class="o">$</span><span class="n">test</span><span class="o">$</span><span class="n">type</span><span class="p">)</span><span class="w"> </span><span class="c1"># (3)!</span>
+<span class="n">tab</span>
+</code></pre></div></p>
+<ol>
+<li><code>type ~ .</code> is a shorthand for indicating that the <code>type</code> column are the labels, and all the other columns are the inputs. </li>
+<li>When you run this, it will give a warning. Find out how you can modify <code>split$test</code> to not trigger the warning.</li>
+<li>Apply <code>summary</code> to <code>nb</code>, <code>pred</code>, <code>tab</code>, and see what you get.</li>
+</ol>
+<div class="highlight"><pre><span></span><code>pred    e    p
+   e 1278  130
+   p    8 1079
+</code></pre></div>
+<div class="highlight"><pre><span></span><code><span class="nf">sum</span><span class="p">(</span><span class="nf">diag</span><span class="p">(</span><span class="n">tab</span><span class="p">))</span><span class="w"> </span><span class="o">/</span><span class="w"> </span><span class="nf">sum</span><span class="p">(</span><span class="n">tab</span><span class="p">)</span>
+</code></pre></div>
+<div class="highlight"><pre><span></span><code>[1] 0.9446894
+</code></pre></div>
+<p>Just with this simple model we get around 94% accuracy. Try to improve it.</p>
+
+
+
+
+
+
+
+
+
+  
+
+
+
+  <form class="md-feedback" name="feedback" hidden>
+    <fieldset>
+      <legend class="md-feedback__title">
+        Was this page informative?
+      </legend>
+      <div class="md-feedback__inner">
+        <div class="md-feedback__list">
+          
+            <button class="md-feedback__icon md-icon" type="submit" title="This page was helpful" data-md-value="1">
+              <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M23 10a2 2 0 0 0-2-2h-6.32l.96-4.57c.02-.1.03-.21.03-.32 0-.41-.17-.79-.44-1.06L14.17 1 7.59 7.58C7.22 7.95 7 8.45 7 9v10a2 2 0 0 0 2 2h9c.83 0 1.54-.5 1.84-1.22l3.02-7.05c.09-.23.14-.47.14-.73zM1 21h4V9H1z"/></svg>
+            </button>
+          
+            <button class="md-feedback__icon md-icon" type="submit" title="This page could be improved" data-md-value="0">
+              <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M19 15h4V3h-4m-4 0H6c-.83 0-1.54.5-1.84 1.22l-3.02 7.05c-.09.23-.14.47-.14.73v2a2 2 0 0 0 2 2h6.31l-.95 4.57c-.02.1-.03.2-.03.31 0 .42.17.79.44 1.06L9.83 23l6.58-6.59c.37-.36.59-.86.59-1.41V5a2 2 0 0 0-2-2"/></svg>
+            </button>
+          
+        </div>
+        <div class="md-feedback__note">
+          
+            <div data-md-value="1" hidden>
+              
+              
+                
+              
+              Thanks for your feedback!
+            </div>
+          
+            <div data-md-value="0" hidden>
+              
+              
+                
+              
+              Thank you for your feedback! Have ideas to improve our site? Please share them in our quick, anonymous <a href="https://forms.gle/WWMkVU66A6pJvmhc9" target="_blank" rel="noopener">feedback form</a>. Your input helps us enhance our documentation!
+            </div>
+          
+        </div>
+      </div>
+    </fieldset>
+  </form>
+
+
+                
+              </article>
+            </div>
+          
+          
+  <script>var tabs=__md_get("__tabs");if(Array.isArray(tabs))e:for(var set of document.querySelectorAll(".tabbed-set")){var labels=set.querySelector(".tabbed-labels");for(var tab of tabs)for(var label of labels.getElementsByTagName("label"))if(label.innerText.trim()===tab){var input=document.getElementById(label.htmlFor);input.checked=!0;continue e}}</script>
+
+<script>var target=document.getElementById(location.hash.slice(1));target&&target.name&&(target.checked=target.name.startsWith("__tabbed_"))</script>
+        </div>
+        
+          <button type="button" class="md-top md-icon" data-md-component="top" hidden>
+  
+  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M13 20h-2V8l-5.5 5.5-1.42-1.42L12 4.16l7.92 7.92-1.42 1.42L13 8z"/></svg>
+  Back to top
+</button>
+        
+      </main>
+      
+<!--
+<div style="padding-right: 40px; padding-bottom:20px; padding-top:10px; text-align: center;">
+    <a href="https://uarizona.service-now.com/sp?id=sc_cat_item&sys_id=2983102adbd23c109627d90d689619c6&sysparm_category=84d3d1acdbc8f4109627d90d6896191f" style="font-size: 16px;color:#AB0520; text-decoration: underline; font-weight: bold;" onmouseover="this.style.color='#EF4056'" onmouseout="this.style.color='#AB0520'">Website Feedback</a>
+  </div>
+-->
+
+<footer class="md-footer">
+    <div class="md-footer-meta md-typeset">
+        <div class="md-footer-meta__inner md-grid">
+            <!-- Copyright and theme information -->
+            <div class="md-copyright">
+                
+                <div class="md-copyright__highlight">
+                    University of Arizona Research Computing
+                </div>
+                
+
+            </div>
+            
+            <div class="md-social">
+  
+    
+    
+    
+    
+    <a href="https://uarizona.service-now.com/sp?id=sc_cat_item&sys_id=2983102adbd23c109627d90d689619c6&sysparm_category=84d3d1acdbc8f4109627d90d6896191f" target="_blank" rel="noopener" title="Contact HPC consulting" class="md-social__link">
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="m20 8-8 5-8-5V6l8 5 8-5m0-2H4c-1.11 0-2 .89-2 2v12a2 2 0 0 0 2 2h16a2 2 0 0 0 2-2V6a2 2 0 0 0-2-2"/></svg>
+    </a>
+  
+    
+    
+    
+    
+    <a href="/support_and_training/faqs/" target="_blank" rel="noopener" title="FAQs" class="md-social__link">
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M16 20v2H4c-1.1 0-2-.9-2-2V7h2v13zm4-18H8c-1.1 0-2 .9-2 2v12c0 1.1.9 2 2 2h12c1.1 0 2-.9 2-2V4c0-1.1-.9-2-2-2m-5 12h-2v-2h2zm1.8-5.2c-.3.4-.7.7-1.1.9-.2.2-.4.3-.5.5-.2.2-.2.5-.2.8h-2q0-.75.3-1.2c.2-.3.5-.6 1-.9q.45-.3.6-.6c.2-.2.2-.5.2-.8s-.1-.6-.3-.8-.4-.3-.8-.3c-.3 0-.5.1-.7.2-.2.2-.3.4-.3.7h-1.9c0-.8.2-1.4.8-1.8.7-.3 1.4-.5 2.3-.5s1.7.2 2.2.7.8 1.1.8 1.8c0 .5-.2.9-.4 1.3"/></svg>
+    </a>
+  
+    
+    
+    
+    
+    <a href="https://portal.hpc.arizona.edu/portal/" target="_blank" rel="noopener" title="User portal" class="md-social__link">
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 4a4 4 0 0 1 4 4 4 4 0 0 1-4 4 4 4 0 0 1-4-4 4 4 0 0 1 4-4m0 10c4.42 0 8 1.79 8 4v2H4v-2c0-2.21 3.58-4 8-4"/></svg>
+    </a>
+  
+    
+    
+    
+    
+    <a href="https://ood.hpc.arizona.edu/pun/sys/dashboard" target="_blank" rel="noopener" title="Open OnDemand" class="md-social__link">
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M16.36 14c.08-.66.14-1.32.14-2s-.06-1.34-.14-2h3.38c.16.64.26 1.31.26 2s-.1 1.36-.26 2m-5.15 5.56c.6-1.11 1.06-2.31 1.38-3.56h2.95a8.03 8.03 0 0 1-4.33 3.56M14.34 14H9.66c-.1-.66-.16-1.32-.16-2s.06-1.35.16-2h4.68c.09.65.16 1.32.16 2s-.07 1.34-.16 2M12 19.96c-.83-1.2-1.5-2.53-1.91-3.96h3.82c-.41 1.43-1.08 2.76-1.91 3.96M8 8H5.08A7.92 7.92 0 0 1 9.4 4.44C8.8 5.55 8.35 6.75 8 8m-2.92 8H8c.35 1.25.8 2.45 1.4 3.56A8 8 0 0 1 5.08 16m-.82-2C4.1 13.36 4 12.69 4 12s.1-1.36.26-2h3.38c-.08.66-.14 1.32-.14 2s.06 1.34.14 2M12 4.03c.83 1.2 1.5 2.54 1.91 3.97h-3.82c.41-1.43 1.08-2.77 1.91-3.97M18.92 8h-2.95a15.7 15.7 0 0 0-1.38-3.56c1.84.63 3.37 1.9 4.33 3.56M12 2C6.47 2 2 6.5 2 12a10 10 0 0 0 10 10 10 10 0 0 0 10-10A10 10 0 0 0 12 2"/></svg>
+    </a>
+  
+    
+    
+    
+    
+    <a href="https://www.youtube.com/@universityofarizonauitsres7597" target="_blank" rel="noopener" title="Training videos" class="md-social__link">
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="m10 15 5.19-3L10 9zm11.56-7.83c.13.47.22 1.1.28 1.9.07.8.1 1.49.1 2.09L22 12c0 2.19-.16 3.8-.44 4.83-.25.9-.83 1.48-1.73 1.73-.47.13-1.33.22-2.65.28-1.3.07-2.49.1-3.59.1L12 19c-4.19 0-6.8-.16-7.83-.44-.9-.25-1.48-.83-1.73-1.73-.13-.47-.22-1.1-.28-1.9-.07-.8-.1-1.49-.1-2.09L2 12c0-2.19.16-3.8.44-4.83.25-.9.83-1.48 1.73-1.73.47-.13 1.33-.22 2.65-.28 1.3-.07 2.49-.1 3.59-.1L12 5c4.19 0 6.8.16 7.83.44.9.25 1.48.83 1.73 1.73"/></svg>
+    </a>
+  
+    
+    
+    
+    
+    <a href="https://metrics.hpc.arizona.edu/" target="_blank" rel="noopener" title="HPC job metrics" class="md-social__link">
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M17.45 15.18 22 7.31V21H2V3h2v12.54L9.5 6 16 9.78l4.24-7.33 1.73 1-5.23 9.05-6.51-3.75L4.31 19h2.26l4.39-7.56z"/></svg>
+    </a>
+  
+</div>
+            
+        </div>
+    </div>
+</footer>
+
+    </div>
+    <div class="md-dialog" data-md-component="dialog">
+      <div class="md-dialog__inner md-typeset"></div>
+    </div>
+    
+    
+    <script id="__config" type="application/json">{"base": "../../../..", "features": ["navigation.tracking", "navigation.instant", "navigation.path", "toc.integrate", "content.tabs.link", "content.tooltips", "content.code.copy", "content.code.annotate", "content.code.select", "navigation.top"], "search": "../../../../assets/javascripts/workers/search.f8cc74c7.min.js", "translations": {"clipboard.copied": "Copied to clipboard", "clipboard.copy": "Copy to clipboard", "search.result.more.one": "1 more on this page", "search.result.more.other": "# more on this page", "search.result.none": "No matching documents", "search.result.one": "1 matching document", "search.result.other": "# matching documents", "search.result.placeholder": "Type to start searching", "search.result.term.missing": "Missing", "select.version": "Select version"}}</script>
+    
+    
+      <script src="../../../../assets/javascripts/bundle.f13b1293.min.js"></script>
+      
+        <script src="../../../../assets/javascripts/mathjax.js"></script>
+      
+        <script src="https://polyfill.io/v3/polyfill.min.js?features=es6"></script>
+      
+        <script src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
+      
+    
+  </body>
+</html>

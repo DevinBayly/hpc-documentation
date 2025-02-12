@@ -1,0 +1,4376 @@
+<!-- Elements added to main will be displayed on all pages -->
+
+<!doctype html>
+<html lang="en" class="no-js">
+  <head>
+    
+      <meta charset="utf-8">
+      <meta name="viewport" content="width=device-width,initial-scale=1">
+      
+      
+      
+      
+        <link rel="prev" href="../glossary/">
+      
+      
+        <link rel="next" href="../grants/">
+      
+      
+      <link rel="icon" href="../../assets/images/favicon.ico">
+      <meta name="generator" content="mkdocs-1.6.1, mkdocs-material-9.6.2">
+    
+    
+      
+        <title>Linux Cheat Sheet - UArizona HPC Documentation</title>
+      
+    
+    
+      <link rel="stylesheet" href="../../assets/stylesheets/main.d7758b05.min.css">
+      
+        
+        <link rel="stylesheet" href="../../assets/stylesheets/palette.06af60db.min.css">
+      
+      
+
+  
+  
+  
+  
+  <style>:root{--md-annotation-icon:url('data:image/svg+xml;charset=utf-8,<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M8.17 2.76A10.1 10.1 0 0 1 12 2c1.31 0 2.61.26 3.83.76 1.21.5 2.31 1.24 3.24 2.17s1.67 2.03 2.17 3.24c.5 1.22.76 2.52.76 3.83 0 2.65-1.05 5.2-2.93 7.07A9.97 9.97 0 0 1 12 22a10.1 10.1 0 0 1-3.83-.76 10 10 0 0 1-3.24-2.17A9.97 9.97 0 0 1 2 12c0-2.65 1.05-5.2 2.93-7.07.93-.93 2.03-1.67 3.24-2.17M12 17l1.56-3.42L17 12l-3.44-1.56L12 7l-1.57 3.44L7 12l3.43 1.58z"/></svg>');}</style>
+
+
+    
+    
+      
+    
+    
+      
+        
+        
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto:300,300i,400,400i,700,700i%7CRoboto+Mono:400,400i,700,700i&display=fallback">
+        <style>:root{--md-text-font:"Roboto";--md-code-font:"Roboto Mono"}</style>
+      
+    
+    
+      <link rel="stylesheet" href="../../assets/stylesheets/extra.css">
+    
+    <script>__md_scope=new URL("../..",location),__md_hash=e=>[...e].reduce(((e,_)=>(e<<5)-e+_.charCodeAt(0)),0),__md_get=(e,_=localStorage,t=__md_scope)=>JSON.parse(_.getItem(t.pathname+"."+e)),__md_set=(e,_,t=localStorage,a=__md_scope)=>{try{t.setItem(a.pathname+"."+e,JSON.stringify(_))}catch(e){}}</script>
+    
+      
+  
+
+
+  
+  
+
+<script id="__analytics">function __md_analytics(){function e(){dataLayer.push(arguments)}window.dataLayer=window.dataLayer||[],e("js",new Date),e("config","G-3V0VRBSRZF"),document.addEventListener("DOMContentLoaded",(function(){document.forms.search&&document.forms.search.query.addEventListener("blur",(function(){this.value&&e("event","search",{search_term:this.value})}));document$.subscribe((function(){var t=document.forms.feedback;if(void 0!==t)for(var a of t.querySelectorAll("[type=submit]"))a.addEventListener("click",(function(a){a.preventDefault();var n=document.location.pathname,d=this.getAttribute("data-md-value");e("event","feedback",{page:n,data:d}),t.firstElementChild.disabled=!0;var r=t.querySelector(".md-feedback__note [data-md-value='"+d+"']");r&&(r.hidden=!1)})),t.hidden=!1})),location$.subscribe((function(t){e("config","G-3V0VRBSRZF",{page_path:t.pathname})}))}));var t=document.createElement("script");t.async=!0,t.src="https://www.googletagmanager.com/gtag/js?id=G-3V0VRBSRZF",document.getElementById("__analytics").insertAdjacentElement("afterEnd",t)}</script>
+  
+    <script>"undefined"!=typeof __md_analytics&&__md_analytics()</script>
+  
+
+    
+    
+    
+  </head>
+  
+  
+    
+    
+    
+    
+    
+    <body dir="ltr" data-md-color-scheme="default" data-md-color-primary="custom" data-md-color-accent="custom">
+  
+    
+    <input class="md-toggle" data-md-toggle="drawer" type="checkbox" id="__drawer" autocomplete="off">
+    <input class="md-toggle" data-md-toggle="search" type="checkbox" id="__search" autocomplete="off">
+    <label class="md-overlay" for="__drawer"></label>
+    <div data-md-component="skip">
+      
+        
+        <a href="#linux-cheat-sheet" class="md-skip">
+          Skip to content
+        </a>
+      
+    </div>
+    <div data-md-component="announce">
+      
+        <aside class="md-banner">
+          <div class="md-banner__inner md-grid md-typeset">
+            
+            
+<p style="font-size: 16px;"> <!--Typically, size is 15px, I've temporarily increased it to bring attention to puma 9 transition-->
+    &#9888; <b>Action Required: Transition to Rocky Linux 9</b>  	&#9888; <br>
+  Puma's migration to Rocky Linux 9 will be completed on Wednesday, January 29th. <br><u><b>If you use Puma and have not migrated yet, do so now to avoid disruptions to your workflows.</b></u> Visit our <a href="/resources/updates/">OS migration documentation</a> for guidance.
+<br><b>Warning:</b> Active jobs on old Puma (CentOS 7) will be <b>terminated</b> on maintenance day. Submit to El Gato, Ocelote, or Puma9 to avoid workflow disruptions.</p>
+
+          </div>
+          
+        </aside>
+      
+    </div>
+    
+    
+      
+
+  
+
+<header class="md-header md-header--shadow" data-md-component="header">
+  <nav class="md-header__inner md-grid" aria-label="Header">
+    <a href="../.." title="UArizona HPC Documentation" class="md-header__button md-logo" aria-label="UArizona HPC Documentation" data-md-component="logo">
+      
+  <img src="../../assets/images/home/uofa_cactus_computing3.png" alt="logo">
+
+    </a>
+    <label class="md-header__button md-icon" for="__drawer">
+      
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M3 6h18v2H3zm0 5h18v2H3zm0 5h18v2H3z"/></svg>
+    </label>
+    <div class="md-header__title" data-md-component="header-title">
+      <div class="md-header__ellipsis">
+        <div class="md-header__topic">
+          <span class="md-ellipsis">
+            UArizona HPC Documentation
+          </span>
+        </div>
+        <div class="md-header__topic" data-md-component="header-topic">
+          <span class="md-ellipsis">
+            
+              Linux Cheat Sheet
+            
+          </span>
+        </div>
+      </div>
+    </div>
+    
+      
+    
+    
+    
+    
+      <label class="md-header__button md-icon" for="__search">
+        
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.52 6.52 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5"/></svg>
+      </label>
+      <div class="md-search" data-md-component="search" role="dialog">
+  <label class="md-search__overlay" for="__search"></label>
+  <div class="md-search__inner" role="search">
+    <form class="md-search__form" name="search">
+      <input type="text" class="md-search__input" name="query" aria-label="Search" placeholder="Search" autocapitalize="off" autocorrect="off" autocomplete="off" spellcheck="false" data-md-component="search-query" required>
+      <label class="md-search__icon md-icon" for="__search">
+        
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.52 6.52 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5"/></svg>
+        
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11z"/></svg>
+      </label>
+      <nav class="md-search__options" aria-label="Search">
+        
+        <button type="reset" class="md-search__icon md-icon" title="Clear" aria-label="Clear" tabindex="-1">
+          
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M19 6.41 17.59 5 12 10.59 6.41 5 5 6.41 10.59 12 5 17.59 6.41 19 12 13.41 17.59 19 19 17.59 13.41 12z"/></svg>
+        </button>
+      </nav>
+      
+    </form>
+    <div class="md-search__output">
+      <div class="md-search__scrollwrap" tabindex="0" data-md-scrollfix>
+        <div class="md-search-result" data-md-component="search-result">
+          <div class="md-search-result__meta">
+            Initializing search
+          </div>
+          <ol class="md-search-result__list" role="presentation"></ol>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+    
+    
+      <div class="md-header__source">
+        <a href="https://github.com/UA-ResearchComputing-HPC/hpc-documentation" title="Go to repository" class="md-source" data-md-component="source">
+  <div class="md-source__icon md-icon">
+    
+    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512"><!--! Font Awesome Free 6.7.2 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License) Copyright 2024 Fonticons, Inc.--><path d="M439.55 236.05 244 40.45a28.87 28.87 0 0 0-40.81 0l-40.66 40.63 51.52 51.52c27.06-9.14 52.68 16.77 43.39 43.68l49.66 49.66c34.23-11.8 61.18 31 35.47 56.69-26.49 26.49-70.21-2.87-56-37.34L240.22 199v121.85c25.3 12.54 22.26 41.85 9.08 55a34.34 34.34 0 0 1-48.55 0c-17.57-17.6-11.07-46.91 11.25-56v-123c-20.8-8.51-24.6-30.74-18.64-45L142.57 101 8.45 235.14a28.86 28.86 0 0 0 0 40.81l195.61 195.6a28.86 28.86 0 0 0 40.8 0l194.69-194.69a28.86 28.86 0 0 0 0-40.81"/></svg>
+  </div>
+  <div class="md-source__repository">
+    GitHub
+  </div>
+</a>
+      </div>
+    
+  </nav>
+  
+</header>
+    
+    <div class="md-container" data-md-component="container">
+      
+      
+        
+          
+        
+      
+      <main class="md-main" data-md-component="main">
+        <div class="md-main__inner md-grid">
+          
+            
+              
+              <div class="md-sidebar md-sidebar--primary" data-md-component="sidebar" data-md-type="navigation" >
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    
+
+
+
+  
+
+<nav class="md-nav md-nav--primary md-nav--integrated" aria-label="Navigation" data-md-level="0">
+  <label class="md-nav__title" for="__drawer">
+    <a href="../.." title="UArizona HPC Documentation" class="md-nav__button md-logo" aria-label="UArizona HPC Documentation" data-md-component="logo">
+      
+  <img src="../../assets/images/home/uofa_cactus_computing3.png" alt="logo">
+
+    </a>
+    UArizona HPC Documentation
+  </label>
+  
+    <div class="md-nav__source">
+      <a href="https://github.com/UA-ResearchComputing-HPC/hpc-documentation" title="Go to repository" class="md-source" data-md-component="source">
+  <div class="md-source__icon md-icon">
+    
+    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512"><!--! Font Awesome Free 6.7.2 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License) Copyright 2024 Fonticons, Inc.--><path d="M439.55 236.05 244 40.45a28.87 28.87 0 0 0-40.81 0l-40.66 40.63 51.52 51.52c27.06-9.14 52.68 16.77 43.39 43.68l49.66 49.66c34.23-11.8 61.18 31 35.47 56.69-26.49 26.49-70.21-2.87-56-37.34L240.22 199v121.85c25.3 12.54 22.26 41.85 9.08 55a34.34 34.34 0 0 1-48.55 0c-17.57-17.6-11.07-46.91 11.25-56v-123c-20.8-8.51-24.6-30.74-18.64-45L142.57 101 8.45 235.14a28.86 28.86 0 0 0 0 40.81l195.61 195.6a28.86 28.86 0 0 0 40.8 0l194.69-194.69a28.86 28.86 0 0 0 0-40.81"/></svg>
+  </div>
+  <div class="md-source__repository">
+    GitHub
+  </div>
+</a>
+    </div>
+  
+  <ul class="md-nav__list" data-md-scrollfix>
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../.." class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Home
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    
+    
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_2" >
+        
+          
+          <label class="md-nav__link" for="__nav_2" id="__nav_2_label" tabindex="0">
+            
+  
+  <span class="md-ellipsis">
+    HPC Quick Start
+    
+  </span>
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_2_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_2">
+            <span class="md-nav__icon md-icon"></span>
+            HPC Quick Start
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../quick_start/overview/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Overview
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../quick_start/what_is_hpc/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    What is HPC?
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../quick_start/common_misconceptions/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Common Misconceptions
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../quick_start/logging_in/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Logging In
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../quick_start/storage_and_transfers/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Storage and Transfers
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../quick_start/accessing_compute/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Accessing Compute Nodes
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../quick_start/software/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Software
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../quick_start/summary/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Summary
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    
+    
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_3" >
+        
+          
+          <label class="md-nav__link" for="__nav_3" id="__nav_3_label" tabindex="0">
+            
+  
+  <span class="md-ellipsis">
+    Policies
+    
+  </span>
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_3_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_3">
+            <span class="md-nav__icon md-icon"></span>
+            Policies
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../policies/acceptable_use/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Acceptable Use
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../policies/access/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Access
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../policies/acknowledgements/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Acknowledgements
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../policies/buy_in/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Buy-in
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../policies/committees/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Committees
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../policies/loss_of_university_affiliation/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Loss of University Affiliation
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../policies/maintenance/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Maintenance
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../policies/special_projects/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Special Projects
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    
+    
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_4" >
+        
+          
+          <label class="md-nav__link" for="__nav_4" id="__nav_4_label" tabindex="0">
+            
+  
+  <span class="md-ellipsis">
+    Resources
+    
+  </span>
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_4_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_4">
+            <span class="md-nav__icon md-icon"></span>
+            Resources
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../resources/allocations/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Allocations
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../resources/compute_resources/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Compute Resources
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../resources/data_center/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Research Data Center
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../resources/secure_hpc/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Secure Services
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    
+    
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_5" >
+        
+          
+          <label class="md-nav__link" for="__nav_5" id="__nav_5_label" tabindex="0">
+            
+  
+  <span class="md-ellipsis">
+    Access
+    
+  </span>
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_5_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_5">
+            <span class="md-nav__icon md-icon"></span>
+            Access
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../registration_and_access/account_creation/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Account Creation
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../registration_and_access/account_deletion/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Account Deletion
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../registration_and_access/group_management/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Group Management
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../registration_and_access/system_access/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    System Access
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../registration_and_access/system_overview/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    System Layout
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../registration_and_access/vpn/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    VPN
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    
+    
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_6" >
+        
+          
+          <label class="md-nav__link" for="__nav_6" id="__nav_6_label" tabindex="0">
+            
+  
+  <span class="md-ellipsis">
+    Storage and Transfers
+    
+  </span>
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_6_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_6">
+            <span class="md-nav__icon md-icon"></span>
+            Storage and Transfers
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    
+    
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_6_1" >
+        
+          
+          <label class="md-nav__link" for="__nav_6_1" id="__nav_6_1_label" tabindex="0">
+            
+  
+  <span class="md-ellipsis">
+    Storage
+    
+  </span>
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_6_1_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_6_1">
+            <span class="md-nav__icon md-icon"></span>
+            Storage
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../storage_and_transfers/storage/overview/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Overview
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../storage_and_transfers/storage/hpc_storage/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    HPC Storage
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../storage_and_transfers/storage/rental_storage/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Rental Storage
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../storage_and_transfers/storage/rdas_storage/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    R-DAS Storage
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../storage_and_transfers/storage/tier2_storage/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Tier2 AWS Storage
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    
+    
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_6_2" >
+        
+          
+          <label class="md-nav__link" for="__nav_6_2" id="__nav_6_2_label" tabindex="0">
+            
+  
+  <span class="md-ellipsis">
+    Transfers
+    
+  </span>
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_6_2_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_6_2">
+            <span class="md-nav__icon md-icon"></span>
+            Transfers
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../storage_and_transfers/transfers/overview/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Overview
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../storage_and_transfers/transfers/open_on_demand/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Open OnDemand
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../storage_and_transfers/transfers/cyberduck/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Cyberduck
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../storage_and_transfers/transfers/sftp_ftp_lftp/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    FTP/LFTP/SFTP
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../storage_and_transfers/transfers/globus/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Globus
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../storage_and_transfers/transfers/irods/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    iRODS
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../storage_and_transfers/transfers/rsync/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Rsync
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../storage_and_transfers/transfers/rclone/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Rclone
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../storage_and_transfers/transfers/scp/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    SCP
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    
+    
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_7" >
+        
+          
+          <label class="md-nav__link" for="__nav_7" id="__nav_7_label" tabindex="0">
+            
+  
+  <span class="md-ellipsis">
+    Software
+    
+  </span>
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_7_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_7">
+            <span class="md-nav__icon md-icon"></span>
+            Software
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../software/overview/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Overview
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../software/modules/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Modules
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../software/user_installations/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    User Installations
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../software/common_datasets/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Common Datasets
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    
+    
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_7_5" >
+        
+          
+          <label class="md-nav__link" for="__nav_7_5" id="__nav_7_5_label" tabindex="0">
+            
+  
+  <span class="md-ellipsis">
+    Popular Software
+    
+  </span>
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_7_5_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_7_5">
+            <span class="md-nav__icon md-icon"></span>
+            Popular Software
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../software/popular_software/anaconda/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Anaconda
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../software/popular_software/gaussian/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Gaussian
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../software/popular_software/alphafold/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    AlphaFold
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../software/popular_software/mamba/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Mamba
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../software/popular_software/matlab/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Matlab
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../software/popular_software/perl/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Perl
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../software/popular_software/python/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Python
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../software/popular_software/R/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    R
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../software/popular_software/vscode_remote_connection/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    VSCode Remote Connection
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    
+    
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_7_6" >
+        
+          
+          <label class="md-nav__link" for="__nav_7_6" id="__nav_7_6_label" tabindex="0">
+            
+  
+  <span class="md-ellipsis">
+    Containers
+    
+  </span>
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_7_6_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_7_6">
+            <span class="md-nav__icon md-icon"></span>
+            Containers
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../software/containers/what_are_containers/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    What are Containers
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../software/containers/containers_on_hpc/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Containers on HPC
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../software/containers/pulling_containers/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Pulling Containers
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../software/containers/building_containers/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Building Containers
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../software/containers/using_containers/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Using Containers
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    
+    
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_8" >
+        
+          
+          <label class="md-nav__link" for="__nav_8" id="__nav_8_label" tabindex="0">
+            
+  
+  <span class="md-ellipsis">
+    Running Jobs
+    
+  </span>
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_8_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_8">
+            <span class="md-nav__icon md-icon"></span>
+            Running Jobs
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../running_jobs/overview/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Overview
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../running_jobs/job_limits/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Job Limits
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../running_jobs/cpus_and_memory/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    CPUs and Memory
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../running_jobs/open_on_demand/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Open OnDemand/Graphical Jobs
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../running_jobs/interactive_jobs/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Interactive Jobs
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    
+    
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_8_6" >
+        
+          
+          <label class="md-nav__link" for="__nav_8_6" id="__nav_8_6_label" tabindex="0">
+            
+  
+  <span class="md-ellipsis">
+    Batch Jobs
+    
+  </span>
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_8_6_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_8_6">
+            <span class="md-nav__icon md-icon"></span>
+            Batch Jobs
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../running_jobs/batch_jobs/intro/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Intro to Batch
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../running_jobs/batch_jobs/batch_directives/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Batch Directives
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../running_jobs/batch_jobs/environment_variables/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Environment Variables
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../running_jobs/batch_jobs/array_jobs/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Array Jobs
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../running_jobs/batch_jobs/gnu_parallel_jobs/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Jobs with GNU Parallel
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../running_jobs/batch_jobs/job_dependencies/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Job Dependencies
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../running_jobs/batch_jobs/submitting_jobs/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Submitting Jobs
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../running_jobs/monitoring_jobs_and_resources/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Monitoring Jobs and Resources
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../running_jobs/parallelization/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Parallelization
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    
+    
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_8_9" >
+        
+          
+          <label class="md-nav__link" for="__nav_8_9" id="__nav_8_9_label" tabindex="0">
+            
+  
+  <span class="md-ellipsis">
+    Visualization
+    
+  </span>
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_8_9_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_8_9">
+            <span class="md-nav__icon md-icon"></span>
+            Visualization
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../running_jobs/visualization/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Intro
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    
+    
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_8_9_2" >
+        
+          
+          <label class="md-nav__link" for="__nav_8_9_2" id="__nav_8_9_2_label" tabindex="0">
+            
+  
+  <span class="md-ellipsis">
+    Blender
+    
+  </span>
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="3" aria-labelledby="__nav_8_9_2_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_8_9_2">
+            <span class="md-nav__icon md-icon"></span>
+            Blender
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../running_jobs/visualization/blender/command_line_rendering/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Blender Command Line Rendering
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../running_jobs/visualization/blender/scaling_up_blender_rendering/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Scaling Up Blender Rendering
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    
+    
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_8_9_3" >
+        
+          
+          <label class="md-nav__link" for="__nav_8_9_3" id="__nav_8_9_3_label" tabindex="0">
+            
+  
+  <span class="md-ellipsis">
+    ParaView
+    
+  </span>
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="3" aria-labelledby="__nav_8_9_3_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_8_9_3">
+            <span class="md-nav__icon md-icon"></span>
+            ParaView
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../running_jobs/visualization/paraview/essential_ideas/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Essential Ideas
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../running_jobs/visualization/paraview/getting_started_with_paraview_gui/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Getting Started with Paraview GUI
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../running_jobs/visualization/paraview/cgal_vespa/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    CGAl Vespa
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../running_jobs/visualization/paraview/paraview_python_plugins/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Paraview Python Plugins
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../running_jobs/visualization/paraview/getting_started_with_paraview_terminal/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Getting Started with Paraview Terminal
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../running_jobs/visualization/paraview/graphs_and_exporting_data/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Graphs and Exporting Data
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../running_jobs/visualization/paraview/cameras_and_keyframes/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Cameras and Keyframes
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../running_jobs/visualization/paraview/headless_batch_rendering/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Headless Batch Rendering
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../running_jobs/visualization/paraview/speeding_up_filters_and_rendering_with_client_server_configurations/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Speeding up Filters & Rendering with Client Server configurations
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../running_jobs/visualization/paraview/visualizing_netcdf_files/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Visualizing NetCDF Files
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    
+    
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_8_9_4" >
+        
+          
+          <label class="md-nav__link" for="__nav_8_9_4" id="__nav_8_9_4_label" tabindex="0">
+            
+  
+  <span class="md-ellipsis">
+    Reconstruction
+    
+  </span>
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="3" aria-labelledby="__nav_8_9_4_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_8_9_4">
+            <span class="md-nav__icon md-icon"></span>
+            Reconstruction
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../running_jobs/visualization/reconstruction/gaussian_splatting/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Gaussian Splatting
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../running_jobs/visualization/arcgis_pro_heightmaps/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    ArcGIS Pro Heightmaps
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../running_jobs/visualization/visit/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    VisIt
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+    
+      
+      
+  
+  
+    
+  
+  
+  
+    
+    
+    
+    
+    <li class="md-nav__item md-nav__item--active md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_9" checked>
+        
+          
+          <label class="md-nav__link" for="__nav_9" id="__nav_9_label" tabindex="0">
+            
+  
+  <span class="md-ellipsis">
+    Support
+    
+  </span>
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_9_label" aria-expanded="true">
+          <label class="md-nav__title" for="__nav_9">
+            <span class="md-nav__icon md-icon"></span>
+            Support
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../consulting_services/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Consulting Services
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../people/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Support Staff
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../faqs/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    FAQs
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../glossary/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Glossary
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+    
+  
+  
+  
+    <li class="md-nav__item md-nav__item--active">
+      
+      <input class="md-nav__toggle md-toggle" type="checkbox" id="__toc">
+      
+      
+        
+      
+      
+        <label class="md-nav__link md-nav__link--active" for="__toc">
+          
+  
+  <span class="md-ellipsis">
+    Linux Cheat Sheet
+    
+  </span>
+  
+
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <a href="./" class="md-nav__link md-nav__link--active">
+        
+  
+  <span class="md-ellipsis">
+    Linux Cheat Sheet
+    
+  </span>
+  
+
+      </a>
+      
+        
+
+<nav class="md-nav md-nav--secondary" aria-label="Table of contents">
+  
+  
+  
+    
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Table of contents
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#why-learn-bash" class="md-nav__link">
+    <span class="md-ellipsis">
+      Why Learn Bash
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#shell-basics" class="md-nav__link">
+    <span class="md-ellipsis">
+      Shell Basics
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Shell Basics">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#shortcuts" class="md-nav__link">
+    <span class="md-ellipsis">
+      Shortcuts
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#commands" class="md-nav__link">
+    <span class="md-ellipsis">
+      Commands
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#hidden-files-and-directories" class="md-nav__link">
+    <span class="md-ellipsis">
+      Hidden Files and Directories
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#environment-variables" class="md-nav__link">
+    <span class="md-ellipsis">
+      Environment Variables
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#linux-file-permissions" class="md-nav__link">
+    <span class="md-ellipsis">
+      Linux File Permissions
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Linux File Permissions">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#types-of-permissions" class="md-nav__link">
+    <span class="md-ellipsis">
+      Types of Permissions
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#viewing-permissions" class="md-nav__link">
+    <span class="md-ellipsis">
+      Viewing Permissions
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#changing-permissions" class="md-nav__link">
+    <span class="md-ellipsis">
+      Changing Permissions
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Changing Permissions">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#symbolic" class="md-nav__link">
+    <span class="md-ellipsis">
+      Symbolic
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#octal" class="md-nav__link">
+    <span class="md-ellipsis">
+      Octal
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#changing-group-ownership" class="md-nav__link">
+    <span class="md-ellipsis">
+      Changing Group Ownership
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#changing-user-ownership" class="md-nav__link">
+    <span class="md-ellipsis">
+      Changing User Ownership
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#file-management-in-shared-spaces" class="md-nav__link">
+    <span class="md-ellipsis">
+      File Management in Shared Spaces
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="File Management in Shared Spaces">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#default-group-ownership" class="md-nav__link">
+    <span class="md-ellipsis">
+      Default Group Ownership
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#default-permissions" class="md-nav__link">
+    <span class="md-ellipsis">
+      Default Permissions
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#sticky-bits" class="md-nav__link">
+    <span class="md-ellipsis">
+      Sticky Bits
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#compression-and-archiving" class="md-nav__link">
+    <span class="md-ellipsis">
+      Compression and Archiving
+    </span>
+  </a>
+  
+</li>
+      
+    </ul>
+  
+</nav>
+      
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../grants/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Grants
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../external_resources/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Community and External Resources
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../website_accessibility/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Website Accessibility
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    
+    
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_10" >
+        
+          
+          <label class="md-nav__link" for="__nav_10" id="__nav_10_label" tabindex="0">
+            
+  
+  <span class="md-ellipsis">
+    Events and Workshops
+    
+  </span>
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_10_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_10">
+            <span class="md-nav__icon md-icon"></span>
+            Events and Workshops
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../events/calendar/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Calendar
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../events/workshop_materials/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    HPC Workshop Materials
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    
+    
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_11" >
+        
+          
+          <label class="md-nav__link" for="__nav_11" id="__nav_11_label" tabindex="0">
+            
+  
+  <span class="md-ellipsis">
+    Blog
+    
+  </span>
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_11_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_11">
+            <span class="md-nav__icon md-icon"></span>
+            Blog
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+    
+  
+  
+    <li class="md-nav__item">
+      <a href="../../blog/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Blog
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    
+    
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_11_2" >
+        
+          
+          <label class="md-nav__link" for="__nav_11_2" id="__nav_11_2_label" tabindex="0">
+            
+  
+  <span class="md-ellipsis">
+    Archive
+    
+  </span>
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_11_2_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_11_2">
+            <span class="md-nav__icon md-icon"></span>
+            Archive
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+    
+  
+  
+    <li class="md-nav__item">
+      <a href="../../blog/archive/2025/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    2025
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+    
+  
+  
+    <li class="md-nav__item">
+      <a href="../../blog/archive/2024/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    2024
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    
+    
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_11_3" >
+        
+          
+          <label class="md-nav__link" for="__nav_11_3" id="__nav_11_3_label" tabindex="0">
+            
+  
+  <span class="md-ellipsis">
+    Categories
+    
+  </span>
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_11_3_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_11_3">
+            <span class="md-nav__icon md-icon"></span>
+            Categories
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+    
+  
+  
+    <li class="md-nav__item">
+      <a href="../../blog/category/ai/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    AI
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+    
+  
+  
+    <li class="md-nav__item">
+      <a href="../../blog/category/conferences/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Conferences
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+    
+  
+  
+    <li class="md-nav__item">
+      <a href="../../blog/category/research/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Research
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+    
+  
+  
+    <li class="md-nav__item">
+      <a href="../../blog/category/storage/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Storage
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../results/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Results
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+    
+  </ul>
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+            
+          
+          
+            <div class="md-content" data-md-component="content">
+              <article class="md-content__inner md-typeset">
+                
+                  
+
+
+  
+  
+
+
+<h1 id="linux-cheat-sheet">Linux Cheat Sheet<a class="headerlink" href="#linux-cheat-sheet" title="Permanent link">&para;</a></h1>
+<h2 id="why-learn-bash">Why Learn Bash<a class="headerlink" href="#why-learn-bash" title="Permanent link">&para;</a></h2>
+<p>Bash is a powerful command line shell that allows you to interact with our systems efficiently. It enables scripting and automation, job submission, file and directory management, remote access, resource monitoring, environment customization, parallel computing, data preprocessing, version control, error handling, software dependency management, custom workflows, and offers a valuable skill set applicable beyond HPC tasks. In other words, it allows you to do a lot!</p>
+<p>In the cheat sheet below, we offer some basics as a reference. We also highly suggest you explore some more comprehensive guides such as the following: <a href="../../events/workshop_materials/intro_to_linux/">Introduction to Linux on HPC</a></p>
+<h2 id="shell-basics">Shell Basics<a class="headerlink" href="#shell-basics" title="Permanent link">&para;</a></h2>
+<h3 id="shortcuts">Shortcuts<a class="headerlink" href="#shortcuts" title="Permanent link">&para;</a></h3>
+<p>Shortcuts can be used as stand-ins for system locations, avoiding the need for full paths. A few examples:</p>
+<table>
+<thead>
+<tr>
+<th>Shortcut</th>
+<th>Description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><code>~</code></td>
+<td>Your home directory</td>
+</tr>
+<tr>
+<td><code>.</code></td>
+<td>Your working directory</td>
+</tr>
+<tr>
+<td><code>..</code></td>
+<td>One directory above your working directory</td>
+</tr>
+</tbody>
+</table>
+<h3 id="commands">Commands<a class="headerlink" href="#commands" title="Permanent link">&para;</a></h3>
+<table>
+<thead>
+<tr>
+<th><code>ls</code></th>
+<th>List the contents of a directory</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><code>ls -la</code></td>
+<td>List the contents of a directory including hidden files</td>
+</tr>
+<tr>
+<td><code>cd</code></td>
+<td>Change your working directory</td>
+</tr>
+<tr>
+<td><code>pwd</code></td>
+<td>Show the path to your working directory</td>
+</tr>
+<tr>
+<td><code>mkdir</code></td>
+<td>Create a new directory</td>
+</tr>
+<tr>
+<td><code>rm</code></td>
+<td>Delete a file. <strong>Be careful</strong>, files deleted this way <strong>can't be retrieved</strong></td>
+</tr>
+<tr>
+<td><code>rm -r</code></td>
+<td>Delete a directory. <strong>Be careful</strong>, directories deleted this way <strong>can't be retrieved</strong></td>
+</tr>
+</tbody>
+</table>
+<h2 id="hidden-files-and-directories">Hidden Files and Directories<a class="headerlink" href="#hidden-files-and-directories" title="Permanent link">&para;</a></h2>
+<p>Hidden files and directories start with a dot <code>.</code> and won't show up when you do a simple <code>ls</code>. Some of these files are used to configure your environment when you first log in. Be careful when removing or modifying these files since doing so can cause unintended consequences.</p>
+<div class="admonition tip">
+<p class="admonition-title">Tip</p>
+<p>The <code>~</code> in the filenames below indicates your home directory. For example, <code>~/.bashrc</code> is specifying a file in your home called <code>.bashrc</code>.</p>
+</div>
+<table>
+<thead>
+<tr>
+<th><div style="width:120px">File/Directory</div></th>
+<th>What It Does</th>
+<th>Warnings</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><code>~/.bash_profile</code></td>
+<td>This file sets your working environment when you first log into HPC. This file sources your <code>~/.bashrc</code> (see below).</td>
+<td>See the list in the danger block below.</td>
+</tr>
+<tr>
+<td><code>~/.bashrc</code></td>
+<td>This file sets your working environment when you first log into HPC.</td>
+<td>See the list in the danger block below.</td>
+</tr>
+<tr>
+<td><code>~/.local</code></td>
+<td>This is a hidden directory in your home where pip-installed python packages, jupyter kernels, RStudio session information, etc. goes.</td>
+<td>If you pip-install python packages when a virtual environment is not active, they will be installed in this directory. These will then be automatically loaded for all future python sessions (version-specific), including in Singularity images. This may cause versioning issues. We recommend always using <a href="../../software/popular_software/python/">virtual environments</a>.</td>
+</tr>
+<tr>
+<td><code>~/.apptainer</code></td>
+<td>A hidden directory in your home where Apptainer images and cache files are stored by default.</td>
+<td>This directory can grow large quickly and fill up your home. You can modify your <code>~/.bashrc</code> to <a href="../../software/containers/containers_on_hpc/#cache-directory">set a different cache directory location</a> that has a larger quota.</td>
+</tr>
+</tbody>
+</table>
+<div class="admonition danger">
+<p class="admonition-title">Danger</p>
+<p>When working with hidden configuration files in your account (<code>.bashrc</code> and <code>.bash_profile</code>), be careful of:</p>
+<ol>
+<li>
+<p><strong>Aliasing important Linux commands</strong></p>
+<p>For example, the character <code>.</code> is a shortcut for <code>source</code>. If you do something like add <code>alias .=&lt;command&gt;</code> to your bashrc, you will lose basic functionality in the terminal, e.g., access to modules, virtual environments, etc. </p>
+</li>
+<li>
+<p><strong>Recursively sourcing configuration files</strong></p>
+<p>If you add <code>source ~/.bashrc</code> or <code>source ~/.bash_profile</code> to your bashrc, then you will enter an infinite sourcing loop. This means when you try to log in, your terminal will freeze, then your access will be denied. </p>
+</li>
+<li>
+<p><strong>Using <code>echo</code></strong></p>
+<p>If you use CLI tools for data transfer, e.g. <code>scp</code> or <code>sftp</code>, they may require a "silent" terminal. If you're trying to initiate transfers and are getting the error "Received message too long", check your bashrc to make sure you aren't printing anything to the terminal. </p>
+</li>
+<li>
+<p><strong>Removing your files</strong></p>
+<p>If you delete either your <code>~/.bashrc</code> or <code>~/.bash_profile</code>, you will lose access to <code>module</code> commands. </p>
+</li>
+</ol>
+</div>
+<h2 id="environment-variables">Environment Variables<a class="headerlink" href="#environment-variables" title="Permanent link">&para;</a></h2>
+<p>Bash variables control how your environment is configured. For example: what executables, libraries, header files, etc. are findable by default; information about your Slurm job; MPI settings; GPU configuration; etc. To see all the environment variables that are defined for your session, try running the command <code>env</code>.</p>
+<p>An example of an important environment variable is <code>PATH</code>. This is set to a <code>:</code>-delimited list of paths that it uses to search for executables. You can see what it's set to by running <code>echo $PATH</code>. Any time you run a command, for example <code>ls</code>, that list is searched in order. To add new executables to your environment, you can add a path to <code>PATH</code>. For example:</p>
+<div class="highlight"><pre><span></span><code>export PATH=/path/to/new/directory:$PATH
+</code></pre></div>
+<p>This is what modules do: they update your environment variables to put new software and libraries into your environment for use. Some examples of some important variables are listed below:</p>
+<table>
+<thead>
+<tr>
+<th>Variable</th>
+<th>Function</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><code>PATH</code></td>
+<td>A colon-delimited list of paths used to search for executables. When you run a command, such as <code>ls</code>, the directories listed in <code>PATH</code> are searched in order.</td>
+</tr>
+<tr>
+<td><code>LD_LIBRARY_PATH</code></td>
+<td>A colon-delimited list of directories in which the linker should search for shared libraries at runtime. Useful for specifying additional library directories for dynamically linked programs. For example: <code>export LD_LIBRARY_PATH=/path/to/library:$LD_LIBRARY_PATH</code></td>
+</tr>
+<tr>
+<td><code>CFLAGS</code>, <code>CXXFLAGS</code>, <code>LDFLAGS</code></td>
+<td>Environment variables used to specify compiler flags for compiling C, C++, and linking respectively. These variables are often used to customize the build process of software. For example: <code>export CFLAGS="-O2 -march=native $CFLAGS"</code></td>
+</tr>
+<tr>
+<td><code>CC</code>, <code>CXX</code>, <code>FC</code></td>
+<td>Environment variables specifying the C, C++, and Fortran compilers, respectively. These variables allow users to specify which compiler should be used during the build process of software. For example: <code>export CC=gcc</code></td>
+</tr>
+<tr>
+<td><code>OMP_NUM_THREADS</code></td>
+<td>Specifies the number of OpenMP threads to use for parallelized programs. This variable controls the number of threads used in parallel regions of OpenMP-enabled programs. For example: <code>export OMP_NUM_THREADS=4</code></td>
+</tr>
+</tbody>
+</table>
+<p><a href="../../running_jobs/batch_jobs/environment_variables/">Slurm also sets its own environment variables</a>.</p>
+<h2 id="linux-file-permissions">Linux File Permissions<a class="headerlink" href="#linux-file-permissions" title="Permanent link">&para;</a></h2>
+<p>Linux file permissions control who can access files and directories and what they are able to do with them.</p>
+<p>HPC users may find it useful or necessary to share files and/or directories with collaborators. To do this effectively, it may become necessary to familiarize yourself with the linux file permission system in order to give collaborators access to your files. </p>
+<h3 id="types-of-permissions">Types of Permissions<a class="headerlink" href="#types-of-permissions" title="Permanent link">&para;</a></h3>
+<p>All files and directories on a Linux system have permissions defined for them. There are three types:</p>
+<table>
+<thead>
+<tr>
+<th>Permission</th>
+<th>Symbol</th>
+<th>Directory meaning</th>
+<th>File meaning</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Read</td>
+<td><code>r</code></td>
+<td>Users can view the contents of the directory</td>
+<td>Users can read the contents of a file</td>
+</tr>
+<tr>
+<td>Write</td>
+<td><code>w</code></td>
+<td>Users can modify the contents of a directory</td>
+<td>Users can write to a file</td>
+</tr>
+<tr>
+<td>Execute</td>
+<td><code>x</code></td>
+<td>Users can <code>cd</code> into a directory</td>
+<td>Users can directly execute a file</td>
+</tr>
+</tbody>
+</table>
+<p>When a permission is missing, you will see a <code>-</code></p>
+<h3 id="viewing-permissions">Viewing Permissions<a class="headerlink" href="#viewing-permissions" title="Permanent link">&para;</a></h3>
+<p>To see a file or directory's file permissions, run the command <code>ls -l</code>. This will show you output that looks like the following:</p>
+<p><center><code style="background-color: #faca89;">-</code><code style="background-color: #fff0bf;">rwx</code><code style="background-color: #deffbf;">r-x</code><code style="background-color: #bffff6;">---</code><code> 1 </code><code style="background-color: #fff0bf;">username</code><code> </code><code style="background-color: #deffbf;">groupname</code><code> 0 Feb 27 09:54 file</code></center></p>
+<table>
+<thead>
+<tr>
+<th>String</th>
+<th>Access Group</th>
+<th>Meaning</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><code style="background-color: #faca89;">-</code></td>
+<td>Tells you whether this item is a regular file (<code>-</code>), directory (<code>d</code>), or link <code>(l)</code></td>
+<td>In this example, we're looking at a regular file</td>
+</tr>
+<tr>
+<td><code style="background-color: #fff0bf;">rwx</code></td>
+<td>This describes the permissions that are set at the user level. In this case, they apply to the user with the username <code style="background-color: #fff0bf;">username</code>. Your username is your NetID</td>
+<td>In this example, the file's owner can read, modify, and execute this file.</td>
+</tr>
+<tr>
+<td><code style="background-color: #deffbf;">r-x</code></td>
+<td>This describes the permissions that are set at the group level. In this case, they apply to anyone who is a member of the group <code style="background-color: #deffbf;">groupname</code>. To see your groups you're a member of, run the command <code>groups</code>.</td>
+<td>In this example, group members are allowed to see and execute the contents of this file, but they cannot modify it.</td>
+</tr>
+<tr>
+<td><code style="background-color: #bffff6;">---</code></td>
+<td>This describes the permissions that are set for anyone else on the system.</td>
+<td>In this example, the rest of the HPC community can't see or edit the contents of this file and can't execute it</td>
+</tr>
+</tbody>
+</table>
+<h3 id="changing-permissions">Changing Permissions<a class="headerlink" href="#changing-permissions" title="Permanent link">&para;</a></h3>
+<div class="admonition tip">
+<p class="admonition-title">Permissions changes limitations</p>
+<p>Only the owner of a file or directory can change its permissions. </p>
+</div>
+<p>To change the permissions of a file or directory, you can use the command <code>chmod</code>. This command accepts two types of input: symbolic and octal.</p>
+<h4 id="symbolic">Symbolic<a class="headerlink" href="#symbolic" title="Permanent link">&para;</a></h4>
+<p>Symbolic notation is the most intuitive to understand. It involves a comma-delimited list of permissions symbols, each representing a specific permission type (read, write, execute) for a particular user or group. Here's a breakdown of the symbols used:</p>
+<table>
+<thead>
+<tr>
+<th>Symbol</th>
+<th>Meaning</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><code>u</code></td>
+<td>"User". Refers to the user who owns the file.</td>
+</tr>
+<tr>
+<td><code>g</code></td>
+<td>"Group". Refers to the group that the file belongs to.</td>
+</tr>
+<tr>
+<td><code>o</code></td>
+<td>"Other". Refers to other users who are not the owner or in the group.</td>
+</tr>
+<tr>
+<td><code>a</code></td>
+<td>"All". Refers to all users (<code>u</code>, <code>g</code>, and <code>o</code>).</td>
+</tr>
+</tbody>
+</table>
+<p>For each of these, you can use <code>+</code> to add a permission, <code>-</code> to remove a permission, or <code>=</code> to set the permissions explicitly. The permission symbols are: <code>r</code>,<code>w</code>, and <code>x</code> and match those described under <a href="#types-of-permissions">Types of Permissions above</a>.</p>
+<p>The general syntax is</p>
+<div class="highlight"><pre><span></span><code>chmod [who][operator][permissions]
+</code></pre></div>
+<p>Here are some examples of how you might use symbolic notation with the <code>chmod</code> command:</p>
+<ul>
+<li>To give the owner read and write permissions: <code>chmod u+rw file.txt</code></li>
+<li>To remove execute permissions for the group: <code>chmod g-x file.txt</code></li>
+<li>To give all users read and execute permissions without write permissions: <code>chmod a=rx file.txt</code></li>
+</ul>
+<h4 id="octal">Octal<a class="headerlink" href="#octal" title="Permanent link">&para;</a></h4>
+<p>Octal notation is a more compact way of representing permissions using numbers. Each permission type (read, write, execute) is assigned a numeric value:</p>
+<table>
+<thead>
+<tr>
+<th>Octal notation</th>
+<th>Permission</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><code>4</code></td>
+<td>read</td>
+</tr>
+<tr>
+<td><code>2</code></td>
+<td>write</td>
+</tr>
+<tr>
+<td><code>1</code></td>
+<td>execute</td>
+</tr>
+</tbody>
+</table>
+<p>To set permissions, you add these values together for each permission type. For example:</p>
+<ul>
+<li>Read and write permissions: <code>4 (read) + 2 (write) = 6</code></li>
+<li>Execute permission only: <code>1 (execute)</code></li>
+</ul>
+<p>You then represent the permissions for the user, group, and others as a three-digit number. For instance:</p>
+<ul>
+<li><code>600</code> gives read and write permissions to the owner and no permissions to the group and others.</li>
+<li><code>755</code> gives read, write, and execute permissions to the owner, and read and execute permissions to the group and others.</li>
+</ul>
+<p>To use octal notation with the <code>chmod</code> command, you specify the permissions directly as numbers. For example:</p>
+<ul>
+<li><code>chmod 600 file.txt</code></li>
+<li><code>chmod 755 file.txt</code></li>
+</ul>
+<p>These commands will set the permissions of <code>file.txt</code> accordingly.</p>
+<h3 id="changing-group-ownership">Changing Group Ownership<a class="headerlink" href="#changing-group-ownership" title="Permanent link">&para;</a></h3>
+<div class="admonition tip">
+<p class="admonition-title">Ownership changes limitations</p>
+<p>Only the owner of a file or directory can change its group ownership</p>
+</div>
+<p>To change the group ownership of a file or directory, you can use <code>chgrp</code>. For example:</p>
+<div class="highlight"><pre><span></span><code>chgrp<span class="w"> </span>groupname<span class="w"> </span>/path/to/file
+</code></pre></div>
+<h3 id="changing-user-ownership">Changing User Ownership<a class="headerlink" href="#changing-user-ownership" title="Permanent link">&para;</a></h3>
+<p>Changing the user ownership of a file requires root permissions, even if the user owns the file they are trying to modify. If ownership modifications are needed, <a href="../consulting_services/">contact our consulting team for assistance</a>. </p>
+<h3 id="file-management-in-shared-spaces">File Management in Shared Spaces<a class="headerlink" href="#file-management-in-shared-spaces" title="Permanent link">&para;</a></h3>
+<div class="admonition warning">
+<p class="admonition-title">ACLs unavailable</p>
+<p>Using something like <code>setfacl</code> is possible on some systems to set the default permissions for specific directories and their contents. Unfortunately, ACLs are not available on our systems due to software limitations on our file servers. Some alternatives are detailed below. </p>
+</div>
+<p>If you're working in shared storage and want your files to be accessible to collaborators, sometimes it can be challenging to ensure those files are created with the correct group ownership and file permissions to allow access. In those cases, it might be helpful to look into setting the SGID (Set Group ID) and using the <code>umask</code> command described below.  </p>
+<h4 id="default-group-ownership">Default Group Ownership<a class="headerlink" href="#default-group-ownership" title="Permanent link">&para;</a></h4>
+<p>The SGID (Set Group ID) bit can be set on a directory to ensure that files and directories created within that parent directory inherit its group ownership. This ensures that those files can be made accessible (with the proper permissions) to other members of that group.</p>
+<p>To set the SGID bit on a directory, use the <code>chmod</code> command with the <code>g+s</code> option:</p>
+<div class="highlight"><pre><span></span><code>chmod<span class="w"> </span>g+s<span class="w"> </span>/path/to/directory
+</code></pre></div>
+<p>You'll notice that when a directory does not have the SGID bit set, its group permissions will look something like <code>rwx</code>. When the SGID bit is set, the <code>x</code> will become either an <code>s</code> (if group execute permissions are set) or <code>S</code> (if group execute permissions are disabled). For example:</p>
+<div class="highlight"><pre><span></span><code><span class="gp gp-VirtualEnv">(puma)</span> <span class="gp">[netid@wentletrap EXAMPLES]$ </span>ls<span class="w"> </span>-ld<span class="w"> </span>parent_directory/
+<span class="go">drwxr-xr-x. 2 netid hpcteam 0 Sep  4 12:50 parent_directory/</span>
+<span class="gp gp-VirtualEnv">(puma)</span> <span class="gp">[netid@wentletrap EXAMPLES]$ </span>chmod<span class="w"> </span>g+s<span class="w"> </span>parent_directory/
+<span class="gp gp-VirtualEnv">(puma)</span> <span class="gp">[netid@wentletrap EXAMPLES]$ </span>ls<span class="w"> </span>-ld<span class="w"> </span>parent_directory/
+<span class="go">drwxr-sr-x. 2 netid hpcteam 0 Sep  4 12:50 parent_directory/</span>
+</code></pre></div>
+<h4 id="default-permissions">Default Permissions<a class="headerlink" href="#default-permissions" title="Permanent link">&para;</a></h4>
+<p>The <code>umask</code> command controls the default file permissions for all new files and directories created <mark class="critic">at a user level</mark>. It defines which permissions should <strong>not</strong> be set by default, and thus indirectly determines the default permissions. </p>
+<p>By setting an appropriate <code>umask</code>, you can ensure that files and directories are created with the permissions that are appropriate for your collaborative environment.</p>
+<p>To check your active umask value, you can run the command without arguments. For example, the default on our system is:</p>
+<p><div class="highlight"><pre><span></span><code><span class="gp gp-VirtualEnv">(puma)</span> <span class="gp">[netid@wentletrap EXAMPLES]$ </span><span class="nb">umask</span>
+<span class="go">0022</span>
+</code></pre></div>
+To make sense of this output output, take the last three digits and subtract them from either <code>777</code> (for directories) or <code>666</code> (for files). So for example, in the output shown above, <code>0022</code> means new directories will always be created with the permissions <code>777</code> - <code>022</code> = <code>755</code> which is the same as <code>rwxr-xr-x</code>. Similarly, for files: <code>666</code> - <code>022</code> = <code>644</code> which is the same as <code>r-wr--r--</code>. If you're unfamiliar with octal formatting, see <a href="#octal">octal file permissions above</a> for more information on how these numbers correspond to file permissions.</p>
+<p>To set a new <code>umask</code>, you can include arguments either in octal or symbolic format. Symbolic notation is a little more straightforward and intuitive than octal and uses the syntax </p>
+<div class="highlight"><pre><span></span><code>umask u=&lt;user permissions&gt;,g=&lt;group permissions&gt;,o=&lt;other permissions&gt;
+</code></pre></div>
+<p>For example:</p>
+<p><div class="highlight"><pre><span></span><code><span class="gp gp-VirtualEnv">(puma)</span> <span class="gp">[netid@junonia umask]$ </span>touch<span class="w"> </span>test.txt<span class="w"> </span><span class="o">&amp;&amp;</span><span class="w"> </span>mkdir<span class="w"> </span>test_dir
+<span class="gp gp-VirtualEnv">(puma)</span> <span class="gp">[netid@junonia umask]$ </span>ls<span class="w"> </span>-l<span class="w"> </span>test.txt<span class="w"> </span><span class="o">&amp;&amp;</span><span class="w"> </span>ls<span class="w"> </span>-ld<span class="w"> </span>test_dir/
+<span class="go">-rw-r--r--. 1 netid hpcteam 0 Mar 30 10:24 test.txt</span>
+<span class="go">drwxr-sr-x. 2 netid hpcteam 0 Mar 30 10:24 test_dir/</span>
+<span class="hll"><span class="gp gp-VirtualEnv">(puma)</span> <span class="gp">[netid@junonia umask]$ </span><span class="nb">umask</span><span class="w"> </span><span class="nv">u</span><span class="o">=</span>rwx,g<span class="o">=</span>rwx,o<span class="o">=</span>
+</span><span class="gp gp-VirtualEnv">(puma)</span> <span class="gp">[netid@junonia umask]$ </span>rm<span class="w"> </span>-r<span class="w"> </span>test.txt<span class="w"> </span>test_dir/
+<span class="gp gp-VirtualEnv">(puma)</span> <span class="gp">[netid@junonia umask]$ </span>touch<span class="w"> </span>test.txt<span class="w"> </span><span class="o">&amp;&amp;</span><span class="w"> </span>mkdir<span class="w"> </span>test_dir
+<span class="gp gp-VirtualEnv">(puma)</span> <span class="gp">[netid@junonia umask]$ </span>ls<span class="w"> </span>-l<span class="w"> </span>test.txt<span class="w"> </span><span class="o">&amp;&amp;</span><span class="w"> </span>ls<span class="w"> </span>-ld<span class="w"> </span>test_dir/
+<span class="go">-rw-rw----. 1 netid hpcteam 0 Mar 30 10:24 test.txt</span>
+<span class="go">drwxrws---. 2 netid hpcteam 0 Mar 30 10:24 test_dir/</span>
+</code></pre></div>
+Note how once <code>umask</code> is set by the user, the default permissions applied to the new test file and directory allow group edit access and remove "other" access completely. The octal notation to accomplish the same result would be <code>umask 007</code>. </p>
+<p>Some things to keep in mind: </p>
+<ul>
+<li>
+<p><mark class="critic"><code>umask</code> only affects your active terminal session and does not propagate to future sessions.</mark> This means if you log out and log back in, your umask will be reset to the system default. If you'd like your default file permissions to be permanently changed, you can add your <code>umask</code> command to your ~/.bashrc. For more information on this file, see <a href="#hidden-files-and-directories">hidden files and directories</a> above. </p>
+</li>
+<li>
+<p><code>umask</code> applies to <strong>all</strong> new files and directories you create, so you'll want to make sure you are not inadvertently giving unwanted access to your data.</p>
+</li>
+</ul>
+<h4 id="sticky-bits">Sticky Bits<a class="headerlink" href="#sticky-bits" title="Permanent link">&para;</a></h4>
+<p>In shared environments with group write permissions, it's possible for users to accidentally or intentionally delete files or directories created by others. The Sticky Bit is a security feature that can help manage this issue by restricting file deletion within a directory.</p>
+<p>The Sticky Bit, when set on a directory, ensures that only the file's or directory's owner can delete or rename them. This can be particularly useful in shared directories where multiple users need to collaborate but should not interfere with each other's files. To set the Sticky Bit on a directory, use the chmod command with the <code>+t</code> option:</p>
+<p><div class="highlight"><pre><span></span><code>chmod<span class="w"> </span>+t<span class="w"> </span>/path/to/directory
+</code></pre></div>
+The change will be displayed at the end of the permissions string either as a <code>t</code> (if execute permissions are set for "other") or a <code>T</code> (if execute permissions are disabled for "other"). For example:</p>
+<div class="highlight"><pre><span></span><code><span class="gp gp-VirtualEnv">(puma)</span> <span class="gp">[netid1@wentletrap EXAMPLES]$ </span>ls<span class="w"> </span>-ld<span class="w"> </span>parent_directory/
+<span class="go">drwxrws--T. 3 netid2 hpcteam 512 Sep  4 13:36 parent_directory/</span>
+<span class="gp gp-VirtualEnv">(puma)</span> <span class="gp">[netid1@wentletrap EXAMPLES]$ </span>ls<span class="w"> </span>-l<span class="w"> </span>parent_directory/
+<span class="go">total 4</span>
+<span class="go">drwxrws---. 2 netid2 hpcteam 0 Sep  4 13:36 other_user</span>
+<span class="gp gp-VirtualEnv">(puma)</span> <span class="gp">[netid1@wentletrap EXAMPLES]$ </span>rm<span class="w"> </span>-r<span class="w"> </span>parent_directory/other_user/
+<span class="go">rm: cannot remove ‘parent_directory/other_user/’: Operation not permitted</span>
+</code></pre></div>
+<p>Note that although <code>netid1</code> has full <code>rwx</code> permissions set for both <code>parent_directory</code> and <code>other_user</code>, they cannot delete <code>other_user</code> because the sticky bit is set on the parent directory. Note that if <code>netid2</code> were to try to delete it, they would be successful. </p>
+<p>One thing to keep in mind is that the owner of the parent directory will still be able to delete the contents even if the sticky bit is set and they do not own the directory they are deleting.</p>
+<h2 id="compression-and-archiving">Compression and Archiving<a class="headerlink" href="#compression-and-archiving" title="Permanent link">&para;</a></h2>
+<div class="admonition tip">
+<p class="admonition-title">Tip</p>
+<p>For very large directories, use the file transfer node. Hostname: <code>filexfer.hpc.arizona.edu</code></p>
+</div>
+<p>Are you planning on transferring files to or from HPC? Do you have a lot of them? Then archiving is for you! </p>
+<p>Archiving files is the process of consolidating one or more files or directories into a single, compressed package or archive file. This simplifies data management, reduces storage space, and streamlines file transfer and backup operations. Transferring a single archived file to an external backup location my result in transfer speeds that are an order of magnitude faster than transferring the same data as an uncompressed directory with thousands (or sometimes millions) of files.</p>
+<p>As an example, we'll use the archiving tool <code>tar</code>. The syntax to create an archive is 
+<div class="highlight"><pre><span></span><code>tar &lt;options&gt; &lt;output_archive_name&gt; &lt;contents&gt;
+</code></pre></div></p>
+<p>We'll use the options <code>czvf</code> which stands for:</p>
+<ul>
+<li><code>c</code>: Create a new archive</li>
+<li><code>z</code>: Filter the archive through gzip</li>
+<li><code>v</code>: Verbosely print the output of the archiving process. Optional</li>
+<li><code>f</code>: User archive file</li>
+</ul>
+<p>Archiving a directory <code>dir</code> and its contents into a single file called <code>dir.tar.gz</code> then looks like:</p>
+<div class="highlight"><pre><span></span><code>(puma) [user@wentletrap archiving_example]$ tar czvf dir.tar.gz dir
+dir/
+dir/subdir1/
+dir/subdir1/file.txt
+dir/file1.txt
+dir/file3.txt
+dir/file2.txt
+(puma) [user@wentletrap archiving_example]$ ls
+dir  dir.tar.gz
+</code></pre></div>
+<p>To unpack this archive, change the <code>c</code> to an <code>x</code> which stands for "extract":</p>
+<div class="highlight"><pre><span></span><code>tar xzvf dir.tar.gz
+</code></pre></div>
+
+
+
+
+
+
+
+
+
+  
+
+
+
+  <form class="md-feedback" name="feedback" hidden>
+    <fieldset>
+      <legend class="md-feedback__title">
+        Was this page informative?
+      </legend>
+      <div class="md-feedback__inner">
+        <div class="md-feedback__list">
+          
+            <button class="md-feedback__icon md-icon" type="submit" title="This page was helpful" data-md-value="1">
+              <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M23 10a2 2 0 0 0-2-2h-6.32l.96-4.57c.02-.1.03-.21.03-.32 0-.41-.17-.79-.44-1.06L14.17 1 7.59 7.58C7.22 7.95 7 8.45 7 9v10a2 2 0 0 0 2 2h9c.83 0 1.54-.5 1.84-1.22l3.02-7.05c.09-.23.14-.47.14-.73zM1 21h4V9H1z"/></svg>
+            </button>
+          
+            <button class="md-feedback__icon md-icon" type="submit" title="This page could be improved" data-md-value="0">
+              <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M19 15h4V3h-4m-4 0H6c-.83 0-1.54.5-1.84 1.22l-3.02 7.05c-.09.23-.14.47-.14.73v2a2 2 0 0 0 2 2h6.31l-.95 4.57c-.02.1-.03.2-.03.31 0 .42.17.79.44 1.06L9.83 23l6.58-6.59c.37-.36.59-.86.59-1.41V5a2 2 0 0 0-2-2"/></svg>
+            </button>
+          
+        </div>
+        <div class="md-feedback__note">
+          
+            <div data-md-value="1" hidden>
+              
+              
+                
+              
+              Thanks for your feedback!
+            </div>
+          
+            <div data-md-value="0" hidden>
+              
+              
+                
+              
+              Thank you for your feedback! Have ideas to improve our site? Please share them in our quick, anonymous <a href="https://forms.gle/WWMkVU66A6pJvmhc9" target="_blank" rel="noopener">feedback form</a>. Your input helps us enhance our documentation!
+            </div>
+          
+        </div>
+      </div>
+    </fieldset>
+  </form>
+
+
+                
+              </article>
+            </div>
+          
+          
+  <script>var tabs=__md_get("__tabs");if(Array.isArray(tabs))e:for(var set of document.querySelectorAll(".tabbed-set")){var labels=set.querySelector(".tabbed-labels");for(var tab of tabs)for(var label of labels.getElementsByTagName("label"))if(label.innerText.trim()===tab){var input=document.getElementById(label.htmlFor);input.checked=!0;continue e}}</script>
+
+<script>var target=document.getElementById(location.hash.slice(1));target&&target.name&&(target.checked=target.name.startsWith("__tabbed_"))</script>
+        </div>
+        
+          <button type="button" class="md-top md-icon" data-md-component="top" hidden>
+  
+  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M13 20h-2V8l-5.5 5.5-1.42-1.42L12 4.16l7.92 7.92-1.42 1.42L13 8z"/></svg>
+  Back to top
+</button>
+        
+      </main>
+      
+<!--
+<div style="padding-right: 40px; padding-bottom:20px; padding-top:10px; text-align: center;">
+    <a href="https://uarizona.service-now.com/sp?id=sc_cat_item&sys_id=2983102adbd23c109627d90d689619c6&sysparm_category=84d3d1acdbc8f4109627d90d6896191f" style="font-size: 16px;color:#AB0520; text-decoration: underline; font-weight: bold;" onmouseover="this.style.color='#EF4056'" onmouseout="this.style.color='#AB0520'">Website Feedback</a>
+  </div>
+-->
+
+<footer class="md-footer">
+    <div class="md-footer-meta md-typeset">
+        <div class="md-footer-meta__inner md-grid">
+            <!-- Copyright and theme information -->
+            <div class="md-copyright">
+                
+                <div class="md-copyright__highlight">
+                    University of Arizona Research Computing
+                </div>
+                
+
+            </div>
+            
+            <div class="md-social">
+  
+    
+    
+    
+    
+    <a href="https://uarizona.service-now.com/sp?id=sc_cat_item&sys_id=2983102adbd23c109627d90d689619c6&sysparm_category=84d3d1acdbc8f4109627d90d6896191f" target="_blank" rel="noopener" title="Contact HPC consulting" class="md-social__link">
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="m20 8-8 5-8-5V6l8 5 8-5m0-2H4c-1.11 0-2 .89-2 2v12a2 2 0 0 0 2 2h16a2 2 0 0 0 2-2V6a2 2 0 0 0-2-2"/></svg>
+    </a>
+  
+    
+    
+    
+    
+    <a href="/support_and_training/faqs/" target="_blank" rel="noopener" title="FAQs" class="md-social__link">
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M16 20v2H4c-1.1 0-2-.9-2-2V7h2v13zm4-18H8c-1.1 0-2 .9-2 2v12c0 1.1.9 2 2 2h12c1.1 0 2-.9 2-2V4c0-1.1-.9-2-2-2m-5 12h-2v-2h2zm1.8-5.2c-.3.4-.7.7-1.1.9-.2.2-.4.3-.5.5-.2.2-.2.5-.2.8h-2q0-.75.3-1.2c.2-.3.5-.6 1-.9q.45-.3.6-.6c.2-.2.2-.5.2-.8s-.1-.6-.3-.8-.4-.3-.8-.3c-.3 0-.5.1-.7.2-.2.2-.3.4-.3.7h-1.9c0-.8.2-1.4.8-1.8.7-.3 1.4-.5 2.3-.5s1.7.2 2.2.7.8 1.1.8 1.8c0 .5-.2.9-.4 1.3"/></svg>
+    </a>
+  
+    
+    
+    
+    
+    <a href="https://portal.hpc.arizona.edu/portal/" target="_blank" rel="noopener" title="User portal" class="md-social__link">
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 4a4 4 0 0 1 4 4 4 4 0 0 1-4 4 4 4 0 0 1-4-4 4 4 0 0 1 4-4m0 10c4.42 0 8 1.79 8 4v2H4v-2c0-2.21 3.58-4 8-4"/></svg>
+    </a>
+  
+    
+    
+    
+    
+    <a href="https://ood.hpc.arizona.edu/pun/sys/dashboard" target="_blank" rel="noopener" title="Open OnDemand" class="md-social__link">
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M16.36 14c.08-.66.14-1.32.14-2s-.06-1.34-.14-2h3.38c.16.64.26 1.31.26 2s-.1 1.36-.26 2m-5.15 5.56c.6-1.11 1.06-2.31 1.38-3.56h2.95a8.03 8.03 0 0 1-4.33 3.56M14.34 14H9.66c-.1-.66-.16-1.32-.16-2s.06-1.35.16-2h4.68c.09.65.16 1.32.16 2s-.07 1.34-.16 2M12 19.96c-.83-1.2-1.5-2.53-1.91-3.96h3.82c-.41 1.43-1.08 2.76-1.91 3.96M8 8H5.08A7.92 7.92 0 0 1 9.4 4.44C8.8 5.55 8.35 6.75 8 8m-2.92 8H8c.35 1.25.8 2.45 1.4 3.56A8 8 0 0 1 5.08 16m-.82-2C4.1 13.36 4 12.69 4 12s.1-1.36.26-2h3.38c-.08.66-.14 1.32-.14 2s.06 1.34.14 2M12 4.03c.83 1.2 1.5 2.54 1.91 3.97h-3.82c.41-1.43 1.08-2.77 1.91-3.97M18.92 8h-2.95a15.7 15.7 0 0 0-1.38-3.56c1.84.63 3.37 1.9 4.33 3.56M12 2C6.47 2 2 6.5 2 12a10 10 0 0 0 10 10 10 10 0 0 0 10-10A10 10 0 0 0 12 2"/></svg>
+    </a>
+  
+    
+    
+    
+    
+    <a href="https://www.youtube.com/@universityofarizonauitsres7597" target="_blank" rel="noopener" title="Training videos" class="md-social__link">
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="m10 15 5.19-3L10 9zm11.56-7.83c.13.47.22 1.1.28 1.9.07.8.1 1.49.1 2.09L22 12c0 2.19-.16 3.8-.44 4.83-.25.9-.83 1.48-1.73 1.73-.47.13-1.33.22-2.65.28-1.3.07-2.49.1-3.59.1L12 19c-4.19 0-6.8-.16-7.83-.44-.9-.25-1.48-.83-1.73-1.73-.13-.47-.22-1.1-.28-1.9-.07-.8-.1-1.49-.1-2.09L2 12c0-2.19.16-3.8.44-4.83.25-.9.83-1.48 1.73-1.73.47-.13 1.33-.22 2.65-.28 1.3-.07 2.49-.1 3.59-.1L12 5c4.19 0 6.8.16 7.83.44.9.25 1.48.83 1.73 1.73"/></svg>
+    </a>
+  
+    
+    
+    
+    
+    <a href="https://metrics.hpc.arizona.edu/" target="_blank" rel="noopener" title="HPC job metrics" class="md-social__link">
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M17.45 15.18 22 7.31V21H2V3h2v12.54L9.5 6 16 9.78l4.24-7.33 1.73 1-5.23 9.05-6.51-3.75L4.31 19h2.26l4.39-7.56z"/></svg>
+    </a>
+  
+</div>
+            
+        </div>
+    </div>
+</footer>
+
+    </div>
+    <div class="md-dialog" data-md-component="dialog">
+      <div class="md-dialog__inner md-typeset"></div>
+    </div>
+    
+    
+    <script id="__config" type="application/json">{"base": "../..", "features": ["navigation.tracking", "navigation.instant", "navigation.path", "toc.integrate", "content.tabs.link", "content.tooltips", "content.code.copy", "content.code.annotate", "content.code.select", "navigation.top"], "search": "../../assets/javascripts/workers/search.f8cc74c7.min.js", "translations": {"clipboard.copied": "Copied to clipboard", "clipboard.copy": "Copy to clipboard", "search.result.more.one": "1 more on this page", "search.result.more.other": "# more on this page", "search.result.none": "No matching documents", "search.result.one": "1 matching document", "search.result.other": "# matching documents", "search.result.placeholder": "Type to start searching", "search.result.term.missing": "Missing", "select.version": "Select version"}}</script>
+    
+    
+      <script src="../../assets/javascripts/bundle.f13b1293.min.js"></script>
+      
+        <script src="../../assets/javascripts/mathjax.js"></script>
+      
+        <script src="https://polyfill.io/v3/polyfill.min.js?features=es6"></script>
+      
+        <script src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
+      
+    
+  </body>
+</html>
