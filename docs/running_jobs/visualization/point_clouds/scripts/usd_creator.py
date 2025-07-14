@@ -57,6 +57,7 @@ for i,pcd in enumerate(pcds):
     arr = makepcloud_pcd(str(pcd))
     names = arr.dtype.names[3:]
     pvars={}
+    # arr[:,1], arr[:,2]
     points.Set(time=i,value=Vt.Vec3fArray.FromNumpy(np.array([arr["x"],arr["y"],arr["z"]]).T))
     for name in names:
       # skip the "_" prefaced names that stand for offset balancing in pcd binary
