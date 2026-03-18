@@ -8,16 +8,15 @@ You can setup ParaView on our HPC cluster or on your workstation. Follow the ins
         These instructions will get you setup with the Paraview GUI on our HPC systems. Feel free to copy and paste this code into an OOD Remote Desktop Terminal, and consult the lower explanations for details about each line.
         
         ```bash
-        apptainer pull docker://ghcr.io/devinbayly/vtk:latest # (1)!
-        wget "https://www.paraview.org/paraview-downloads/download.php?submit=Download&version=v5.11&type=binary&os=Linux&downloadFile=ParaView-5.11.0-MPI-Linux-Python3.9-x86_64.tar.gz" -O paraview.tar.gz # (2)!
-        tar xf paraview.tar.gz # (3)!
-        apptainer exec vtk_latest.sif ./ParaView-5.11.0-MPI-Linux-Python3.9-x86_64/bin/paraview # (4)!
+        module load contrib
+        module load chrisreidy/baylyd/paraview
+        start_paraview
         ```
 
-        1. This pulls an Apptainer container with packages prepared by our visualization consultant to run ParaView on the HPC. For more information on Apptainer containers, see [What are Containers](../../../../software/containers/what_are_containers/index.md).
-        2. This pulls the `paraview` binary from their downloads, and renames it to `paraview.tar.gz`.
-        3. This line extracts the contents of the gzipped tar file.
-        4. This line executes the `paraview` binary and launches the GUI.
+        1. This loads the contributed modules that are available outside of the standard ones on our HPC. 
+        2. This loads the paraview module prepared by our visualization consultant to run ParaView on the HPC. It uses an apptainer container under the hood. For more information on Apptainer containers, see [What are Containers](../../../../software/containers/what_are_containers/index.md).
+
+        3. This line starts paraview's gui.
 
     === "Workstation"
     
